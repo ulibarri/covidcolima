@@ -7,7 +7,7 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Mzo", "Col", "VA", "Tec"],
+    labels: ["Manzanillo", "Colima", "Villa de Álvarez", "Tecomán"],
     datasets: [{
       data: [352, 43, 40, 65],
       backgroundColor: ['#e74a3b', '#1cc88a', '#36b9cc', '#4e73df'],
