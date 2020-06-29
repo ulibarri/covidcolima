@@ -10,8 +10,8 @@ var myPieChart = new Chart(ctx, {
     labels: ["Mzo", "Col", "VA", "Tec"],
     datasets: [{
       data: [352, 43, 40, 65],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#2c9f00'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#36b9ac'],
+      backgroundColor: ['#e74a3b', '#1cc88a', '#36b9cc', '#4e73df'],
+      hoverBackgroundColor: ['#fd7e14', '#17a673', '#2c9faf', '#2e59d9'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
