@@ -7,9 +7,9 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Manzanillo", "Colima", "V. Álvarez", "Tecomán"],
+    labels: ["Manzanillo", "Tecomán", "V. Álvarez", "Colima"],
     datasets: [{
-      data: [441, 76, 61, 103],
+      data: [453, 108, 63, 77],
       backgroundColor: ['#e74a3b', '#1cc88a', '#36b9cc', '#4e73df'],
       hoverBackgroundColor: ['#fd7e14', '#17a673', '#2c9faf', '#2e59d9'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
