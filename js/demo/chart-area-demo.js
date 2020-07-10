@@ -118,3 +118,95 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+// tasa de mortalidad
+
+var ctx2 = document.getElementById("myAreaChart2");
+var myLineChart2 = new Chart(ctx2, {
+  type: 'line',
+  data: {
+    // labels: ["26", "27", "28", "29", "30", "31", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27"],
+    labels: ["26 May", "27", "28", "29", "30", "31", "1 Jun", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "1 Jun", "2", "3", "4", "5", "6", "7", "8"],
+    datasets: [{
+      label: "Tasa",
+      lineTension: 0.2,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      // data: [121, 133, 138, 142, 148, 167, 179, 189, 203, 214, 217, 220, 234, 249, 257, 275, 287, 294, 305, 318, 338, 349, 361, 382, 389, 413, 436, 456, 474, 500, 514],
+      data: [18.18, 17.29, 17.39, 17.61, 16.89, 16.88, 17.09, 16.17, 16.20, 15.34, 14.29, 14.02, 15.21, 15.00, 14.96, 14.86, 14.40, 13.45, 13.59, 13.61, 13.77, 13.84, 13.31, 13.18, 13.02, 13.09, 12.85, 13.56, 13.99, 13.82, 13.50, 13.60, 13.81, 14.29, 14.23, 13.73, 14.00, 13.49, 13.34, 12.97, 13.02, 13.16, 12.92, 12.76],
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 25,
+        top: 25,
+        bottom: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'date'
+        },
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+          maxTicksLimit: 7
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 5,
+          padding: 10,
+          // Include a dollar sign in the ticks
+          callback: function (value, index, values) {
+            return number_format(value);
+          }
+        },
+        gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [2],
+          zeroLineBorderDash: [2]
+        }
+      }],
+    },
+    legend: {
+      display: false
+    },
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      intersect: false,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+        label: function (tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+        }
+      }
+    }
+  }
+});
