@@ -130,13 +130,13 @@ var myLineChart2 = new Chart(ctx2, {
       label: "Tasa",
       lineTension: 0.2,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
-      borderColor: "rgba(78, 115, 223, 1)",
+      borderColor: "rgba(70,208,172,1)",
       pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointBackgroundColor: "rgba(70,208,172, 1)",
+      pointBorderColor: "rgba(70,208,172, 1)",
       pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverBackgroundColor: "rgba(70,208,172, 1)",
+      pointHoverBorderColor: "rgba(70,208,172, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
       // data: [121, 133, 138, 142, 148, 167, 179, 189, 203, 214, 217, 220, 234, 249, 257, 275, 287, 294, 305, 318, 338, 349, 361, 382, 389, 413, 436, 456, 474, 500, 514],
@@ -205,6 +205,98 @@ var myLineChart2 = new Chart(ctx2, {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
           return datasetLabel + ': ' + number_format(tooltipItem.yLabel, 2);
+        }
+      }
+    }
+  }
+});
+
+// recuperados
+var ctx3 = document.getElementById("myAreaChart3");
+var myLineChart3 = new Chart(ctx3, {
+  type: 'line',
+  data: {
+
+    labels: ["27 May", "28", "29", "30", "31", "1 Jun", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "1 Jun", "2", "3", "4", "5", "6", "7", "8", "9"],
+    datasets: [{
+      label: "Recuperados",
+      lineTension: 0.2,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(255,151,115,1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(255,151,115,1)",
+      pointBorderColor: "rgba(255,151,115,1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(255,151,115,1)",
+      pointHoverBorderColor: "rgba(255,151,115,1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+
+      data: [3, 15, 3, 0, 3, 0, 6, 5, 2, 4, 9, 2, 9, 14, 4, 0, 12, 3, 1, 14, 8, 9, 7, 1, 0, 0, 31, 20, 10, 6, 12, 15, 14, 14, 8, 8, 14, 14, 13, 22, 27, 24, 12, 20],
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 25,
+        top: 25,
+        bottom: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'date'
+        },
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+          maxTicksLimit: 7
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 5,
+          padding: 10,
+          // Include a dollar sign in the ticks
+          callback: function (value, index, values) {
+            return number_format(value);
+          }
+        },
+        gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [2],
+          zeroLineBorderDash: [2]
+        }
+      }],
+    },
+    legend: {
+      display: false
+    },
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      intersect: false,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+        label: function (tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
         }
       }
     }
