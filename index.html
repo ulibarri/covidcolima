@@ -19,6 +19,9 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.19.3/apexcharts.js">
+
+
 
 
 </head>
@@ -517,7 +520,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -534,8 +537,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
+            </div> -->
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -552,8 +555,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
+            </div> -->
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -571,7 +574,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-danger shadow h-100 py-2">
@@ -803,16 +806,16 @@
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-danger"></i> Manzanillo 52.96%
+                      <i class="fas fa-circle text-danger"></i> Manzanillo 50.98%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Tecomán 18.18%
+                      <i class="fas fa-circle text-primary"></i> Tecomán 19.40%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> V. Álvarez 9.58%
+                      <i class="fas fa-circle text-info"></i> V. Álvarez 10.40%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Colima 12.25%
+                      <i class="fas fa-circle text-success"></i> Colima 12.00%
                     </span>
 
 
@@ -1052,6 +1055,36 @@
 
             </div>
           </div>
+          <!-- ++++++++++++++++++++++A P E X     C H A R T ++++++++++++ -->
+          <!-- <div class="row">
+
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+          <!-- ++++++++++++++++++++++++++++++++++ -->
           <!-- <div class="row">
             <div class="col-lg-6 mb-4">
               <div class="card shadow mb-4">
@@ -1180,7 +1213,7 @@
                   <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
                   </p>
                   <p>* Letalidad en casos positivos acumulados</p>
-                  <p>** Camas disponibles al 14 Julio 2020, Informe diario por Coronavirus en México <a
+                  <p>** Camas disponibles al 15 Julio 2020, Informe diario por Coronavirus en México <a
                       id="reporte_camas"></a>
                   </p>
                   <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
@@ -1262,26 +1295,26 @@
 </body>
 <script>
   var data = {
-    dia_update: "14 de Julio",
-    cant_positivos: "1012",
-    inc_positivos: "+64",
-    cant_activos: "307",
-    inc_activos: "+29",
-    cant_defunciones: "128",
-    inc_defunciones: "+8",
-    cant_recuperados: "589",
-    inc_recuperados: "+27",
-    cant_sospechosos: "83",
-    inc_sospechosos: "-29",
-    tasa_letalidad: "12.65 %",
-    inc_letalidad: "-0.01",
-    cant_camas: "50 %",
-    inc_camas: "-11 %",
-    municipio_mas_positivos: "Manzanillo +18",
+    dia_update: "15 de Julio",
+    cant_positivos: "1067",
+    inc_positivos: "+55",
+    cant_activos: "332",
+    inc_activos: "+25",
+    cant_defunciones: "134",
+    inc_defunciones: "+6",
+    cant_recuperados: "613",
+    inc_recuperados: "+24",
+    cant_sospechosos: "76",
+    inc_sospechosos: "-7",
+    tasa_letalidad: "12.56 %",
+    inc_letalidad: "-0.09",
+    cant_camas: "54 %",
+    inc_camas: "+4 %",
+    municipio_mas_positivos: "Tecomán +23",
     semaforo: "ROJO",
-    prom_defunciones: "2.16",
-    prom_recuperados: "11.08",
-    prom_acumulados: "18.18",
+    prom_defunciones: "2.24",
+    prom_recuperados: "11.34",
+    prom_acumulados: "18.92",
     chart_acumulados_title: " Casos positivos acumulados. Para el día de hoy: ",
     chart_letalidad_title: "Tasa de letalidad en casos positivos acumulados. Para el día de hoy: ",
     chart_recuperados_title: "Promedio de personas recuperadas diariamente: ",
@@ -1289,57 +1322,57 @@
     chart_positivos_title: "Promedio de casos positivos acumulados por día: ",
     defunciones_title: " Defunciones ",
 
-    cant_defunciones_MZO: "81",
-    inc_defunciones_MZO: "+2",
-    porc_defunciones_MZO: "63.28",
-    porc_width_def_MZO: "width: 63%",
-    value_now_def_MZO: "63",
+    cant_defunciones_MZO: "82",
+    inc_defunciones_MZO: "+1",
+    porc_defunciones_MZO: "61.19",
+    porc_width_def_MZO: "width: 61%",
+    value_now_def_MZO: "61",
 
-    cant_defunciones_TEC: "19",
+    cant_defunciones_TEC: "22",
     inc_defunciones_TEC: "+3",
-    porc_defunciones_TEC: "14.84",
-    porc_width_def_TEC: "width: 15%",
-    value_now_def_TEC: "15",
+    porc_defunciones_TEC: "16.42",
+    porc_width_def_TEC: "width: 16%",
+    value_now_def_TEC: "16",
 
-    cant_defunciones_VILLA: "5",
+    cant_defunciones_VILLA: "6",
     inc_defunciones_VILLA: "+1",
-    porc_defunciones_VILLA: "3.91",
+    porc_defunciones_VILLA: "4.48",
     porc_width_def_VILLA: "width: 4%",
     value_now_def_VILLA: "4",
 
     cant_defunciones_COL: "10",
     inc_defunciones_COL: "0",
-    porc_defunciones_COL: "7.81",
-    porc_width_def_COL: "width: 8%",
-    value_now_def_COL: "8",
+    porc_defunciones_COL: "7.46",
+    porc_width_def_COL: "width: 7%",
+    value_now_def_COL: "7",
 
     cant_defunciones_CUA: "2",
     inc_defunciones_CUA: "0",
-    porc_defunciones_CUA: "1.56",
+    porc_defunciones_CUA: "1.49",
     porc_width_def_CUA: "width: 2%",
     value_now_def_CUA: "2",
 
-    cant_defunciones_ARM: "5",
+    cant_defunciones_ARM: "6",
     inc_defunciones_ARM: "+1",
-    porc_defunciones_ARM: "3.91",
+    porc_defunciones_ARM: "4.48",
     porc_width_def_ARM: "width: 4%",
     value_now_def_ARM: "4",
 
     cant_defunciones_COQ: "2",
     inc_defunciones_COQ: "0",
-    porc_defunciones_COQ: "1.56",
-    porc_width_def_COQ: "width: 3%",
-    value_now_def_COQ: "3",
+    porc_defunciones_COQ: "1.49",
+    porc_width_def_COQ: "width: 2%",
+    value_now_def_COQ: "2",
 
     cant_defunciones_MIN: "1",
     inc_defunciones_MIN: "0",
-    porc_defunciones_MIN: "0.78",
+    porc_defunciones_MIN: "0.75",
     porc_width_def_MIN: "width: 1%",
     value_now_def_MIN: "1",
 
     cant_defunciones_IXT: "3",
-    inc_defunciones_IXT: "+1",
-    porc_defunciones_IXT: "2.34",
+    inc_defunciones_IXT: "0",
+    porc_defunciones_IXT: "2.24",
     porc_width_def_IXT: "width: 2%",
     value_now_def_IXT: "2",
 
@@ -1351,106 +1384,106 @@
 
     activos_title: " Casos activos ",
 
-    cant_activos_MZO: "105",
-    inc_activos_MZO: "+4",
-    porc_activos_MZO: "34.20",
-    porc_width_act_MZO: "width: 34%",
-    value_now_act_MZO: "34",
+    cant_activos_MZO: "108",
+    inc_activos_MZO: "+3",
+    porc_activos_MZO: "32.53",
+    porc_width_act_MZO: "width: 32%",
+    value_now_act_MZO: "32",
 
-    cant_activos_TEC: "81",
-    inc_activos_TEC: "+7",
-    porc_activos_TEC: "26.38",
-    porc_width_act_TEC: "width: 26%",
-    value_now_act_TEC: "26",
+    cant_activos_TEC: "97",
+    inc_activos_TEC: "+16",
+    porc_activos_TEC: "29.22",
+    porc_width_act_TEC: "width: 29%",
+    value_now_act_TEC: "29",
 
-    cant_activos_VILLA: "41",
-    inc_activos_VILLA: "+12",
-    porc_activos_VILLA: "13.36",
-    porc_width_act_VILLA: "width: 13%",
-    value_now_act_VILLA: "13",
+    cant_activos_VILLA: "46",
+    inc_activos_VILLA: "+5",
+    porc_activos_VILLA: "13.86",
+    porc_width_act_VILLA: "width: 14%",
+    value_now_act_VILLA: "14",
 
-    cant_activos_COL: "52",
-    inc_activos_COL: "0",
-    porc_activos_COL: "16.94",
-    porc_width_act_COL: "width: 17%",
-    value_now_act_COL: "17",
+    cant_activos_COL: "48",
+    inc_activos_COL: "-4",
+    porc_activos_COL: "14.46",
+    porc_width_act_COL: "width: 14%",
+    value_now_act_COL: "14",
 
-    cant_activos_CUA: "4",
-    inc_activos_CUA: "+1",
-    porc_activos_CUA: "1.30",
-    porc_width_act_CUA: "width: 1%",
-    value_now_act_CUA: "1",
+    cant_activos_CUA: "6",
+    inc_activos_CUA: "+2",
+    porc_activos_CUA: "1.81",
+    porc_width_act_CUA: "width: 2%",
+    value_now_act_CUA: "2",
 
-    cant_activos_ARM: "9",
+    cant_activos_ARM: "11",
     inc_activos_ARM: "+2",
-    porc_activos_ARM: "2.93",
+    porc_activos_ARM: "3.31",
     porc_width_act_ARM: "width: 3%",
     value_now_act_ARM: "3",
 
-    cant_activos_COQ: "5",
+    cant_activos_COQ: "6",
     inc_activos_COQ: "+1",
-    porc_activos_COQ: "1.63",
+    porc_activos_COQ: "1.81",
     porc_width_act_COQ: "width: 2%",
     value_now_act_COQ: "2",
 
     cant_activos_MIN: "1",
     inc_activos_MIN: "0",
-    porc_activos_MIN: "0.33",
+    porc_activos_MIN: "0.30",
     porc_width_act_MIN: "width: 1%",
     value_now_act_MIN: "1",
 
     cant_activos_IXT: "4",
     inc_activos_IXT: "0",
-    porc_activos_IXT: "1.30",
+    porc_activos_IXT: "1.20",
     porc_width_act_IXT: "width: 1%",
     value_now_act_IXT: "1",
 
     cant_activos_COM: "5",
-    inc_activos_COM: "+2",
-    porc_activos_COM: "1.63",
+    inc_activos_COM: "0",
+    porc_activos_COM: "1.51",
     porc_width_act_COM: "width: 2%",
     value_now_act_COM: "2",
 
     positivos_title: "Incremento en casos positivos acumulados ",
-    cant_positivos_MZO: "536",
-    inc_positivos_MZO: "+18",
-    porc_positivos_MZO: "28.13",
-    porc_width_pos_MZO: "width: 28%",
-    value_now_pos_MZO: "28",
+    cant_positivos_MZO: "544",
+    inc_positivos_MZO: "+8",
+    porc_positivos_MZO: "14.55",
+    porc_width_pos_MZO: "width: 15%",
+    value_now_pos_MZO: "15",
 
-    cant_positivos_TEC: "184",
-    inc_positivos_TEC: "+15",
-    porc_positivos_TEC: "23.44",
-    porc_width_pos_TEC: "width: 23%",
-    value_now_pos_TEC: "23",
+    cant_positivos_TEC: "207",
+    inc_positivos_TEC: "+23",
+    porc_positivos_TEC: "41.82",
+    porc_width_pos_TEC: "width: 42%",
+    value_now_pos_TEC: "42",
 
-    cant_positivos_VILLA: "97",
-    inc_positivos_VILLA: "+15",
-    porc_positivos_VILLA: "23.44",
-    porc_width_pos_VILLA: "width: 23%",
-    value_now_pos_VILLA: "23",
+    cant_positivos_VILLA: "111",
+    inc_positivos_VILLA: "+14",
+    porc_positivos_VILLA: "25.45",
+    porc_width_pos_VILLA: "width: 26%",
+    value_now_pos_VILLA: "26",
 
-    cant_positivos_COL: "124",
-    inc_positivos_COL: "+7",
-    porc_positivos_COL: "10.94",
-    porc_width_pos_COL: "width: 11%",
-    value_now_pos_COL: "11",
+    cant_positivos_COL: "128",
+    inc_positivos_COL: "+4",
+    porc_positivos_COL: "7.27",
+    porc_width_pos_COL: "width: 7%",
+    value_now_pos_COL: "7",
 
-    cant_positivos_CUA: "14",
+    cant_positivos_CUA: "16",
     inc_positivos_CUA: "+2",
-    porc_positivos_CUA: "3.13",
-    porc_width_pos_CUA: "width: 3%",
-    value_now_pos_CUA: "3",
+    porc_positivos_CUA: "3.64",
+    porc_width_pos_CUA: "width: 4%",
+    value_now_pos_CUA: "4",
 
-    cant_positivos_ARM: "23",
-    inc_positivos_ARM: "+4",
-    porc_positivos_ARM: "6.25",
-    porc_width_pos_ARM: "width: 6%",
-    value_now_pos_ARM: "6",
+    cant_positivos_ARM: "26",
+    inc_positivos_ARM: "+3",
+    porc_positivos_ARM: "5.45",
+    porc_width_pos_ARM: "width: 5%",
+    value_now_pos_ARM: "5",
 
-    cant_positivos_COQ: "12",
+    cant_positivos_COQ: "13",
     inc_positivos_COQ: "+1",
-    porc_positivos_COQ: "1.56",
+    porc_positivos_COQ: "1.82",
     porc_width_pos_COQ: "width: 2%",
     value_now_pos_COQ: "2",
 
@@ -1466,13 +1499,13 @@
     porc_width_pos_IXT: "width: 0%",
     value_now_pos_IXT: "0",
 
-    cant_positivos_COM: "8",
-    inc_positivos_COM: "+2",
-    porc_positivos_COM: "3.13",
-    porc_width_pos_COM: "width: 3%",
-    value_now_pos_COM: "3",
-    url_youtube: "https://www.youtube.com/watch?v=5Am490_QmoY",
-    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-140720.pdf"
+    cant_positivos_COM: "0",
+    inc_positivos_COM: "0",
+    porc_positivos_COM: "0",
+    porc_width_pos_COM: "width: 0%",
+    value_now_pos_COM: "0",
+    url_youtube: "https://www.youtube.com/watch?v=9kBaKW_x_Lc",
+    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-150720.pdf"
 
   }
 
@@ -1631,6 +1664,47 @@
   document.getElementById("reporte_camas").setAttribute("href", data.url_youtube);
   document.getElementById("reporte_camas").innerHTML = data.url_youtube;
 
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script>
+
+  // var ctx = document.getElementById("myChart").getContext('2d');
+  // var myChart = new Chart(ctx, {
+  //   type: 'bar',
+  //   data: {
+  //     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  //     datasets: [{
+  //       label: '# of Votes',
+  //       data: [12, 19, 3, 5, 2, 3],
+  //       backgroundColor: [
+  //         'rgba(255, 99, 132, 0.2)',
+  //         'rgba(54, 162, 235, 0.2)',
+  //         'rgba(255, 206, 86, 0.2)',
+  //         'rgba(75, 192, 192, 0.2)',
+  //         'rgba(153, 102, 255, 0.2)',
+  //         'rgba(255, 159, 64, 0.2)'
+  //       ],
+  //       borderColor: [
+  //         'rgba(255,99,132,1)',
+  //         'rgba(54, 162, 235, 1)',
+  //         'rgba(255, 206, 86, 1)',
+  //         'rgba(75, 192, 192, 1)',
+  //         'rgba(153, 102, 255, 1)',
+  //         'rgba(255, 159, 64, 1)'
+  //       ],
+  //       borderWidth: 1
+  //     }]
+  //   },
+  //   options: {
+  //     scales: {
+  //       yAxes: [{
+  //         ticks: {
+  //           beginAtZero: true
+  //         }
+  //       }]
+  //     }
+  //   }
+  // });
 </script>
 
 </html>
