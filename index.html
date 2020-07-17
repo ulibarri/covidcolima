@@ -555,7 +555,7 @@
                 </div>
               </div>
             </div> -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -572,7 +572,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -823,16 +823,16 @@
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-danger"></i> Manzanillo 50.98%
+                      <i class="fas fa-circle text-danger"></i> Manzanillo 50.32%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Tecomán 19.40%
+                      <i class="fas fa-circle text-primary"></i> Tecomán 19.44%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> V. Álvarez 10.40%
+                      <i class="fas fa-circle text-info"></i> V. Álvarez 10.45%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Colima 12.00%
+                      <i class="fas fa-circle text-success"></i> Colima 12.44%
                     </span>
 
 
@@ -1082,7 +1082,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 
                   <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
-                    Manzanillo vs Tecomán</h5>
+                    Manzanillo vs Tecomán Casos positivos acumulados</h5>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
@@ -1234,7 +1234,7 @@
                   <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
                   </p>
                   <p>* Letalidad en casos positivos acumulados</p>
-                  <p>** Camas disponibles al 15 Julio 2020, Informe diario por Coronavirus en México <a
+                  <p>** Camas disponibles al 16 Julio 2020, Informe diario por Coronavirus en México <a
                       id="reporte_camas"></a>
                   </p>
                   <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
@@ -1316,26 +1316,26 @@
 </body>
 <script>
   var data = {
-    dia_update: "15 de Julio",
-    cant_positivos: "1067",
-    inc_positivos: "+55",
-    cant_activos: "332",
-    inc_activos: "+25",
-    cant_defunciones: "134",
-    inc_defunciones: "+6",
+    dia_update: "16 de Julio",
+    cant_positivos: "1101",
+    inc_positivos: "+34",
+    cant_activos: "363",
+    inc_activos: "+31",
+    cant_defunciones: "137",
+    inc_defunciones: "+3",
     cant_recuperados: "613",
-    inc_recuperados: "+24",
-    cant_sospechosos: "76",
-    inc_sospechosos: "-7",
-    tasa_letalidad: "12.56 %",
-    inc_letalidad: "-0.09",
-    cant_camas: "54 %",
-    inc_camas: "+4 %",
-    municipio_mas_positivos: "Tecomán +23",
+    inc_recuperados: "+0",
+    cant_sospechosos: "86",
+    inc_sospechosos: "+10",
+    tasa_letalidad: "12.44 %",
+    inc_letalidad: "-0.12",
+    cant_camas: "63 %",
+    inc_camas: "+9 %",
+    municipio_mas_positivos: "Manzanillo +10",
     semaforo: "ROJO",
-    prom_defunciones: "2.24",
-    prom_recuperados: "11.34",
-    prom_acumulados: "18.92",
+    prom_defunciones: "2.25",
+    prom_recuperados: "11.11",
+    prom_acumulados: "19.21",
     chart_acumulados_title: " Casos positivos acumulados. Para el día de hoy: ",
     chart_letalidad_title: "Tasa de letalidad en casos positivos acumulados. Para el día de hoy: ",
     chart_recuperados_title: "Promedio de personas recuperadas diariamente: ",
@@ -1343,190 +1343,190 @@
     chart_positivos_title: "Promedio de casos positivos acumulados por día: ",
     defunciones_title: " Defunciones ",
 
-    cant_defunciones_MZO: "82",
+    cant_defunciones_MZO: "83",
     inc_defunciones_MZO: "+1",
-    porc_defunciones_MZO: "61.19",
+    porc_defunciones_MZO: "60.58",
     porc_width_def_MZO: "width: 61%",
     value_now_def_MZO: "61",
 
     cant_defunciones_TEC: "22",
-    inc_defunciones_TEC: "+3",
-    porc_defunciones_TEC: "16.42",
+    inc_defunciones_TEC: "+0",
+    porc_defunciones_TEC: "16.06",
     porc_width_def_TEC: "width: 16%",
     value_now_def_TEC: "16",
 
     cant_defunciones_VILLA: "6",
-    inc_defunciones_VILLA: "+1",
-    porc_defunciones_VILLA: "4.48",
+    inc_defunciones_VILLA: "+0",
+    porc_defunciones_VILLA: "4.38",
     porc_width_def_VILLA: "width: 4%",
     value_now_def_VILLA: "4",
 
-    cant_defunciones_COL: "10",
-    inc_defunciones_COL: "0",
-    porc_defunciones_COL: "7.46",
-    porc_width_def_COL: "width: 7%",
-    value_now_def_COL: "7",
+    cant_defunciones_COL: "11",
+    inc_defunciones_COL: "+1",
+    porc_defunciones_COL: "8.03",
+    porc_width_def_COL: "width: 8%",
+    value_now_def_COL: "8",
 
     cant_defunciones_CUA: "2",
-    inc_defunciones_CUA: "0",
-    porc_defunciones_CUA: "1.49",
+    inc_defunciones_CUA: "+0",
+    porc_defunciones_CUA: "1.46",
     porc_width_def_CUA: "width: 2%",
     value_now_def_CUA: "2",
 
     cant_defunciones_ARM: "6",
-    inc_defunciones_ARM: "+1",
-    porc_defunciones_ARM: "4.48",
+    inc_defunciones_ARM: "+0",
+    porc_defunciones_ARM: "4.38",
     porc_width_def_ARM: "width: 4%",
     value_now_def_ARM: "4",
 
-    cant_defunciones_COQ: "2",
-    inc_defunciones_COQ: "0",
-    porc_defunciones_COQ: "1.49",
+    cant_defunciones_COQ: "3",
+    inc_defunciones_COQ: "+1",
+    porc_defunciones_COQ: "2.19",
     porc_width_def_COQ: "width: 2%",
     value_now_def_COQ: "2",
 
     cant_defunciones_MIN: "1",
-    inc_defunciones_MIN: "0",
-    porc_defunciones_MIN: "0.75",
+    inc_defunciones_MIN: "+0",
+    porc_defunciones_MIN: "0.73",
     porc_width_def_MIN: "width: 1%",
     value_now_def_MIN: "1",
 
     cant_defunciones_IXT: "3",
-    inc_defunciones_IXT: "0",
-    porc_defunciones_IXT: "2.24",
+    inc_defunciones_IXT: "+0",
+    porc_defunciones_IXT: "2.19",
     porc_width_def_IXT: "width: 2%",
     value_now_def_IXT: "2",
 
     cant_defunciones_COM: "0",
-    inc_defunciones_COM: "0",
+    inc_defunciones_COM: "+0",
     porc_defunciones_COM: "0",
     porc_width_def_COM: "width: 0%",
     value_now_def_COM: "0",
 
     activos_title: " Casos activos ",
 
-    cant_activos_MZO: "108",
-    inc_activos_MZO: "+3",
-    porc_activos_MZO: "32.53",
+    cant_activos_MZO: "117",
+    inc_activos_MZO: "+9",
+    porc_activos_MZO: "32.23",
     porc_width_act_MZO: "width: 32%",
     value_now_act_MZO: "32",
 
-    cant_activos_TEC: "97",
-    inc_activos_TEC: "+16",
-    porc_activos_TEC: "29.22",
+    cant_activos_TEC: "104",
+    inc_activos_TEC: "+7",
+    porc_activos_TEC: "28.65",
     porc_width_act_TEC: "width: 29%",
     value_now_act_TEC: "29",
 
-    cant_activos_VILLA: "46",
-    inc_activos_VILLA: "+5",
-    porc_activos_VILLA: "13.86",
+    cant_activos_VILLA: "50",
+    inc_activos_VILLA: "+4",
+    porc_activos_VILLA: "13.77",
     porc_width_act_VILLA: "width: 14%",
     value_now_act_VILLA: "14",
 
-    cant_activos_COL: "48",
-    inc_activos_COL: "-4",
-    porc_activos_COL: "14.46",
-    porc_width_act_COL: "width: 14%",
-    value_now_act_COL: "14",
+    cant_activos_COL: "56",
+    inc_activos_COL: "+8",
+    porc_activos_COL: "15.43",
+    porc_width_act_COL: "width: 15%",
+    value_now_act_COL: "15",
 
     cant_activos_CUA: "6",
-    inc_activos_CUA: "+2",
-    porc_activos_CUA: "1.81",
+    inc_activos_CUA: "+0",
+    porc_activos_CUA: "1.65",
     porc_width_act_CUA: "width: 2%",
     value_now_act_CUA: "2",
 
     cant_activos_ARM: "11",
-    inc_activos_ARM: "+2",
-    porc_activos_ARM: "3.31",
+    inc_activos_ARM: "+0",
+    porc_activos_ARM: "3.03",
     porc_width_act_ARM: "width: 3%",
     value_now_act_ARM: "3",
 
-    cant_activos_COQ: "6",
+    cant_activos_COQ: "7",
     inc_activos_COQ: "+1",
-    porc_activos_COQ: "1.81",
+    porc_activos_COQ: "1.93",
     porc_width_act_COQ: "width: 2%",
     value_now_act_COQ: "2",
 
-    cant_activos_MIN: "1",
-    inc_activos_MIN: "0",
-    porc_activos_MIN: "0.30",
+    cant_activos_MIN: "3",
+    inc_activos_MIN: "+2",
+    porc_activos_MIN: "0.83",
     porc_width_act_MIN: "width: 1%",
     value_now_act_MIN: "1",
 
     cant_activos_IXT: "4",
-    inc_activos_IXT: "0",
-    porc_activos_IXT: "1.20",
+    inc_activos_IXT: "+0",
+    porc_activos_IXT: "1.10",
     porc_width_act_IXT: "width: 1%",
     value_now_act_IXT: "1",
 
     cant_activos_COM: "5",
-    inc_activos_COM: "0",
-    porc_activos_COM: "1.51",
-    porc_width_act_COM: "width: 2%",
-    value_now_act_COM: "2",
+    inc_activos_COM: "+0",
+    porc_activos_COM: "1.38",
+    porc_width_act_COM: "width: 1%",
+    value_now_act_COM: "1",
 
     positivos_title: "Incremento en casos positivos acumulados ",
-    cant_positivos_MZO: "544",
-    inc_positivos_MZO: "+8",
-    porc_positivos_MZO: "14.55",
-    porc_width_pos_MZO: "width: 15%",
-    value_now_pos_MZO: "15",
+    cant_positivos_MZO: "554",
+    inc_positivos_MZO: "+10",
+    porc_positivos_MZO: "29.41",
+    porc_width_pos_MZO: "width: 29%",
+    value_now_pos_MZO: "29",
 
-    cant_positivos_TEC: "207",
-    inc_positivos_TEC: "+23",
-    porc_positivos_TEC: "41.82",
-    porc_width_pos_TEC: "width: 42%",
-    value_now_pos_TEC: "42",
+    cant_positivos_TEC: "214",
+    inc_positivos_TEC: "+7",
+    porc_positivos_TEC: "20.59",
+    porc_width_pos_TEC: "width: 21%",
+    value_now_pos_TEC: "21",
 
-    cant_positivos_VILLA: "111",
-    inc_positivos_VILLA: "+14",
-    porc_positivos_VILLA: "25.45",
-    porc_width_pos_VILLA: "width: 26%",
-    value_now_pos_VILLA: "26",
+    cant_positivos_VILLA: "115",
+    inc_positivos_VILLA: "+4",
+    porc_positivos_VILLA: "11.76",
+    porc_width_pos_VILLA: "width: 12%",
+    value_now_pos_VILLA: "12",
 
-    cant_positivos_COL: "128",
-    inc_positivos_COL: "+4",
-    porc_positivos_COL: "7.27",
-    porc_width_pos_COL: "width: 7%",
-    value_now_pos_COL: "7",
+    cant_positivos_COL: "137",
+    inc_positivos_COL: "+9",
+    porc_positivos_COL: "26.47",
+    porc_width_pos_COL: "width: 26%",
+    value_now_pos_COL: "26",
 
-    cant_positivos_CUA: "16",
-    inc_positivos_CUA: "+2",
-    porc_positivos_CUA: "3.64",
-    porc_width_pos_CUA: "width: 4%",
-    value_now_pos_CUA: "4",
+    cant_positivos_CUA: "0",
+    inc_positivos_CUA: "+0",
+    porc_positivos_CUA: "0",
+    porc_width_pos_CUA: "width: 0%",
+    value_now_pos_CUA: "0",
 
-    cant_positivos_ARM: "26",
-    inc_positivos_ARM: "+3",
-    porc_positivos_ARM: "5.45",
-    porc_width_pos_ARM: "width: 5%",
-    value_now_pos_ARM: "5",
+    cant_positivos_ARM: "0",
+    inc_positivos_ARM: "+0",
+    porc_positivos_ARM: "0",
+    porc_width_pos_ARM: "width: 0%",
+    value_now_pos_ARM: "0",
 
-    cant_positivos_COQ: "13",
-    inc_positivos_COQ: "+1",
-    porc_positivos_COQ: "1.82",
-    porc_width_pos_COQ: "width: 2%",
-    value_now_pos_COQ: "2",
+    cant_positivos_COQ: "15",
+    inc_positivos_COQ: "+2",
+    porc_positivos_COQ: "5.88",
+    porc_width_pos_COQ: "width: 6%",
+    value_now_pos_COQ: "6",
 
-    cant_positivos_MIN: "0",
-    inc_positivos_MIN: "0",
-    porc_positivos_MIN: "0",
-    porc_width_pos_MIN: "width: 0%",
-    value_now_pos_MIN: "0",
+    cant_positivos_MIN: "6",
+    inc_positivos_MIN: "+2",
+    porc_positivos_MIN: "5.88",
+    porc_width_pos_MIN: "width: 6%",
+    value_now_pos_MIN: "6",
 
     cant_positivos_IXT: "0",
-    inc_positivos_IXT: "0",
+    inc_positivos_IXT: "+0",
     porc_positivos_IXT: "0",
     porc_width_pos_IXT: "width: 0%",
     value_now_pos_IXT: "0",
 
     cant_positivos_COM: "0",
-    inc_positivos_COM: "0",
+    inc_positivos_COM: "+0",
     porc_positivos_COM: "0",
     porc_width_pos_COM: "width: 0%",
     value_now_pos_COM: "0",
-    url_youtube: "https://www.youtube.com/watch?v=9kBaKW_x_Lc",
-    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-150720.pdf"
+    url_youtube: "https://www.youtube.com/watch?v=HOoOYFfXYMk",
+    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-160720.pdf"
 
   }
 
@@ -1715,10 +1715,10 @@
     },
     series: [{
       name: 'Tecomán',
-      data: generateDayWiseTimeSeries(0, 51)
+      data: generateDayWiseTimeSeries(0, 52)
     }, {
       name: 'Manzanillo',
-      data: generateDayWiseTimeSeries(1, 51)
+      data: generateDayWiseTimeSeries(1, 52)
     }],
     markers: {
       size: 0,
@@ -1775,9 +1775,9 @@
 
   function generateDayWiseTimeSeries(s, count) {
     var values = [[
-      10, 10, 11, 12, 13, 13, 13, 14, 14, 17, 19, 20, 22, 22, 22, 23, 24, 26, 27, 27, 28, 28, 29, 29, 33, 35, 37, 45, 48, 52, 54, 60, 62, 65, 71, 73, 79, 86, 88, 92, 93, 103, 108, 115, 121, 139, 157, 166, 169, 184, 207
+      10, 10, 11, 12, 13, 13, 13, 14, 14, 17, 19, 20, 22, 22, 22, 23, 24, 26, 27, 27, 28, 28, 29, 29, 33, 35, 37, 45, 48, 52, 54, 60, 62, 65, 71, 73, 79, 86, 88, 92, 93, 103, 108, 115, 121, 139, 157, 166, 169, 184, 207, 214
     ], [
-      77, 87, 89, 91, 95, 99, 101, 108, 117, 124, 131, 139, 140, 141, 152, 165, 171, 185, 195, 199, 207, 216, 232, 243, 250, 264, 267, 280, 294, 308, 319, 334, 342, 352, 356, 367, 377, 398, 411, 426, 436, 441, 453, 461, 470, 485, 515, 517, 518, 536, 544
+      77, 87, 89, 91, 95, 99, 101, 108, 117, 124, 131, 139, 140, 141, 152, 165, 171, 185, 195, 199, 207, 216, 232, 243, 250, 264, 267, 280, 294, 308, 319, 334, 342, 352, 356, 367, 377, 398, 411, 426, 436, 441, 453, 461, 470, 485, 515, 517, 518, 536, 544, 554
     ]];
     var i = 0;
     var series = [];
