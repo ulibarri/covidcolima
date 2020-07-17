@@ -1073,7 +1073,8 @@
             </div>
           </div>
           <!-- ++++++++++++++++++++++A P E X     C H A R T ++++++++++++ -->
-          <!-- <div class="row">
+          <div class="row">
+
 
             <div class="col-xl-12 col-lg-12">
               <div class="card shadow mb-4">
@@ -1081,7 +1082,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 
                   <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
-                  </h5>
+                    Manzanillo vs Tecomán</h5>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
@@ -1091,13 +1092,16 @@
                 </div>
 
                 <div class="card-body">
-                  <div class="chart-area">
+                  <!-- <div class="chart-area">
                     <canvas id="myChart"></canvas>
+                  </div> -->
+                  <div id="chart">
+                    <div id="timeline-chart"></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
 
 
@@ -1682,46 +1686,109 @@
   document.getElementById("reporte_camas").innerHTML = data.url_youtube;
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
 
-  // var ctx = document.getElementById("myChart").getContext('2d');
-  // var myChart = new Chart(ctx, {
-  //   type: 'bar',
-  //   data: {
-  //     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-  //     datasets: [{
-  //       label: '# of Votes',
-  //       data: [12, 19, 3, 5, 2, 3],
-  //       backgroundColor: [
-  //         'rgba(255, 99, 132, 0.2)',
-  //         'rgba(54, 162, 235, 0.2)',
-  //         'rgba(255, 206, 86, 0.2)',
-  //         'rgba(75, 192, 192, 0.2)',
-  //         'rgba(153, 102, 255, 0.2)',
-  //         'rgba(255, 159, 64, 0.2)'
-  //       ],
-  //       borderColor: [
-  //         'rgba(255,99,132,1)',
-  //         'rgba(54, 162, 235, 1)',
-  //         'rgba(255, 206, 86, 1)',
-  //         'rgba(75, 192, 192, 1)',
-  //         'rgba(153, 102, 255, 1)',
-  //         'rgba(255, 159, 64, 1)'
-  //       ],
-  //       borderWidth: 1
-  //     }]
-  //   },
-  //   options: {
-  //     scales: {
-  //       yAxes: [{
-  //         ticks: {
-  //           beginAtZero: true
-  //         }
-  //       }]
-  //     }
-  //   }
-  // });
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+  var options = {
+    chart: {
+      type: "area",
+      height: 300,
+      foreColor: "#999",
+      stacked: true,
+      dropShadow: {
+        enabled: true,
+        enabledSeries: [0],
+        top: -2,
+        left: 2,
+        blur: 5,
+        opacity: 0.06
+      }
+    },
+    colors: ['#00E396', '#0090FF'],
+    stroke: {
+      curve: "smooth",
+      width: 3
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [{
+      name: 'Tecomán',
+      data: generateDayWiseTimeSeries(0, 18)
+    }, {
+      name: 'Manzanillo',
+      data: generateDayWiseTimeSeries(1, 18)
+    }],
+    markers: {
+      size: 0,
+      strokeColor: "#fff",
+      strokeWidth: 3,
+      strokeOpacity: 1,
+      fillOpacity: 1,
+      hover: {
+        size: 6
+      }
+    },
+    xaxis: {
+      type: "datetime",
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      labels: {
+        offsetX: 14,
+        offsetY: -5
+      },
+      tooltip: {
+        enabled: true
+      }
+    },
+    grid: {
+      padding: {
+        left: -5,
+        right: 5
+      }
+    },
+    tooltip: {
+      x: {
+        format: "dd MMM yyyy"
+      },
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'left'
+    },
+    fill: {
+      type: "solid",
+      fillOpacity: 0.7
+    }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#timeline-chart"), options);
+
+  chart.render();
+
+  function generateDayWiseTimeSeries(s, count) {
+    var values = [[
+      10, 10, 11, 12, 13, 13, 13, 14, 14, 17, 19, 20, 22, 22, 22, 23, 24, 26, 27, 27, 28, 28, 29, 29, 33, 35, 37, 45, 48, 52, 54, 60, 62, 65, 71, 73, 79, 86, 88, 92, 93, 103, 108, 115, 121, 139, 157, 166, 169, 184, 207
+    ], [
+      77, 87, 89, 91, 95, 99, 101, 108, 117, 124, 131, 139, 140, 141, 152, 165, 171, 185, 195, 199, 207, 216, 232, 243, 250, 264, 267, 280, 294, 308, 319, 334, 342, 352, 356, 367, 377, 398, 411, 426, 436, 441, 453, 461, 470, 485, 515, 517, 518, 536, 544
+    ]];
+    var i = 0;
+    var series = [];
+    var x = new Date("26 May 2020").getTime();
+    while (i < count) {
+      series.push([x, values[s][i]]);
+      x += 86400000;
+      i++;
+    }
+    return series;
+  }
 </script>
 
 </html>
