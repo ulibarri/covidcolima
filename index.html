@@ -1312,6 +1312,7 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-compare-demo.js"></script>
 
 </body>
 <script>
@@ -1690,109 +1691,110 @@
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
-  var options = {
-    chart: {
-      type: "area",
-      height: 300,
-      foreColor: "#999",
-      stacked: true,
-      dropShadow: {
-        enabled: false,
-        enabledSeries: [0],
-        top: -2,
-        left: 2,
-        blur: 5,
-        opacity: 0.06
-      }
-    },
-    colors: ['#0090FF', '#00E396'],
-    stroke: {
-      curve: "smooth",
-      width: 3
-    },
-    dataLabels: {
-      enabled: false
-    },
-    series: [{
-      name: 'Tecomán',
-      data: generateDayWiseTimeSeries(1, 54)
-    }, {
-      name: 'Manzanillo',
-      data: generateDayWiseTimeSeries(1, 54)
-    }],
-    markers: {
-      size: 0,
-      strokeColor: "#fff",
-      strokeWidth: 3,
-      strokeOpacity: 1,
-      fillOpacity: 1,
-      hover: {
-        size: 6
-      }
-    },
-    xaxis: {
-      type: "datetime",
-      axisBorder: {
-        show: false
-      },
-      axisTicks: {
-        show: false
-      }
-    },
-    yaxis: {
-      labels: {
-        offsetX: 14,
-        offsetY: -5
-      },
-      tooltip: {
-        enabled: true
-      }
-    },
-    grid: {
-      padding: {
-        left: -5,
-        right: 5
-      }
-    },
-    tooltip: {
-      x: {
-        format: "dd MMM yyyy"
-      },
-    },
-    legend: {
-      position: 'top',
-      horizontalAlign: 'left'
-    },
-    fill: {
-      type: "solid",
-      fillOpacity: 0.7
-    }
-  };
+  // var options = {
+  //   chart: {
+  //     type: "area",
+  //     height: 300,
+  //     foreColor: "#999",
+  //     stacked: true,
+  //     dropShadow: {
+  //       enabled: false,
+  //       enabledSeries: [0],
+  //       top: -2,
+  //       left: 2,
+  //       blur: 5,
+  //       opacity: 0.06
+  //     }
+  //   },
+  //   colors: ['#0090FF', '#00E396'],
+  //   stroke: {
+  //     curve: "smooth",
+  //     width: 3
+  //   },
+  //   dataLabels: {
+  //     enabled: false
+  //   },
+  //   series: [{
+  //     name: 'Tecomán',
+  //     data: generateDayWiseTimeSeries(1, 54)
+  //   }, {
+  //     name: 'Manzanillo',
+  //     data: generateDayWiseTimeSeries(1, 54)
+  //   }],
+  //   markers: {
+  //     size: 0,
+  //     strokeColor: "#fff",
+  //     strokeWidth: 3,
+  //     strokeOpacity: 1,
+  //     fillOpacity: 1,
+  //     hover: {
+  //       size: 6
+  //     }
+  //   },
+  //   xaxis: {
+  //     type: "datetime",
+  //     axisBorder: {
+  //       show: false
+  //     },
+  //     axisTicks: {
+  //       show: false
+  //     }
+  //   },
+  //   yaxis: {
+  //     labels: {
+  //       offsetX: 14,
+  //       offsetY: -5
+  //     },
+  //     tooltip: {
+  //       enabled: true
+  //     }
+  //   },
+  //   grid: {
+  //     padding: {
+  //       left: -5,
+  //       right: 5
+  //     }
+  //   },
+  //   tooltip: {
+  //     x: {
+  //       format: "dd MMM yyyy"
+  //     },
+  //   },
+  //   legend: {
+  //     position: 'top',
+  //     horizontalAlign: 'left'
+  //   },
+  //   fill: {
+  //     type: "solid",
+  //     fillOpacity: 0.7
+  //   }
+  // };
 
-  var chart = new ApexCharts(document.querySelector("#timeline-chart"), options);
+  // var chart = new ApexCharts(document.querySelector("#timeline-chart"), options);
 
-  chart.render();
+  // chart.render();
 
-  function generateDayWiseTimeSeries(s, count) {
-    var values = [
-      [
-        10, 10, 11, 12, 13, 13, 13, 14, 14, 17, 19, 20, 22, 22, 22, 23, 24, 26, 27, 27, 28, 28, 29, 29, 33, 35, 37, 45, 48, 52, 54, 60, 62, 65, 71, 73, 79, 86, 88, 92, 93, 103, 108, 115, 121, 139, 157, 166, 169, 184, 207, 214, 226, 240
-      ], [
-        77, 87, 89, 91, 95, 99, 101, 108, 117, 124, 131, 139, 140, 141, 152, 165, 171, 185, 195, 199, 207, 216, 232, 243, 250, 264, 267, 280, 294, 308, 319, 334, 342, 352, 356, 367, 377, 398, 411, 426, 436, 441, 453, 461, 470, 485, 515, 517, 518, 536, 544, 554, 572, 578
-      ]];
-    var i = 0;
-    var series = [];
-    var x = new Date("26 May 2020").getTime();
-    while (i < count) {
-      series.push([x, values[s][i]]);
-      x += 86400000;
-      i++;
-    }
+  // function generateDayWiseTimeSeries(s, count) {
+  //   var values = [
+  //     [
+  //       10, 10, 11, 12, 13, 13, 13, 14, 14, 17, 19, 20, 22, 22, 22, 23, 24, 26, 27, 27, 28, 28, 29, 29, 33, 35, 37, 45, 48, 52, 54, 60, 62, 65, 71, 73, 79, 86, 88, 92, 93, 103, 108, 115, 121, 139, 157, 166, 169, 184, 207, 214, 226, 240
+  //     ], [
+  //       77, 87, 89, 91, 95, 99, 101, 108, 117, 124, 131, 139, 140, 141, 152, 165, 171, 185, 195, 199, 207, 216, 232, 243, 250, 264, 267, 280, 294, 308, 319, 334, 342, 352, 356, 367, 377, 398, 411, 426, 436, 441, 453, 461, 470, 485, 515, 517, 518, 536, 544, 554, 572, 578
+  //     ]];
+  //   var i = 0;
+  //   var series = [];
+  //   var x = new Date("26 May 2020").getTime();
+  //   while (i < count) {
+  //     series.push([x, values[s][i]]);
+  //     x += 86400000;
+  //     i++;
+  //   }
     // [
     //   8, 10, 10, 10, 10, 11, 13, 14, 15, 15, 19, 19, 19, 21, 22, 23, 24, 25, 26, 27, 27, 28, 28, 28, 29, 32, 33, 35, 36, 37, 38, 39, 41, 43, 43, 46, 52, 58, 62, 74, 74, 76, 77, 83, 92, 102, 108, 114, 117, 124, 128, 137, 159
     // ],
-    return series;
-  }
+    // return series;
+  // }
 </script>
+
 
 </html>
