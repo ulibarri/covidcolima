@@ -48,8 +48,8 @@ var myPieChart = new Chart(ctx, {
     labels: ["Hombres", "Mujeres"],
     datasets: [{
       data: [103, 54],
-      backgroundColor: ['#1cc88a', '#6f42c1'],
-      hoverBackgroundColor: ['#1cc89f', '#6610f2'],
+      backgroundColor: ['#13855c', '#6f42c1'],
+      hoverBackgroundColor: ['#1cc88a', '#9b7cd4'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
