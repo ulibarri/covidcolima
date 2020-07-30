@@ -9,7 +9,7 @@ var myPieChart = new Chart(ctx, {
   data: {
     labels: ["Manzanillo", "Tecomán", "V. Álvarez", "Colima"],
     datasets: [{
-      data: [702, 389, 235, 310],
+      data: [714, 410, 241, 319],
       backgroundColor: ['#e74a3b', '#1cc88a', '#36b9cc', '#4e73df'],
       hoverBackgroundColor: ['#fd7e14', '#17a673', '#2c9faf', '#2e59d9'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",

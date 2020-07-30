@@ -527,8 +527,7 @@
                     <div class="col mr-2">
                       <div class="text-s font-weight-bold text-info text-uppercase mb-1">Municipio con más casos
                         positivos acumulados </div>
-                      <div id="municipio_mas_positivos" class="h5 mb-0 font-weight-bold text-gray-800">Manzanillo +25
-                        <br>
+                      <div id="municipio_mas_positivos" class="h5 mb-0 font-weight-bold text-gray-800">
                       </div>
                     </div>
                     <div class="col-auto">
@@ -814,16 +813,16 @@
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-danger"></i> Manzanillo 39.66%
+                      <i class="fas fa-circle text-danger"></i> Manzanillo 39.14%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Tecomán 21.98%
+                      <i class="fas fa-circle text-success"></i> Tecomán 22.48%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> V. Álvarez 13.28%
+                      <i class="fas fa-circle text-info"></i> V. Álvarez 13.21%
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Colima 17.51%
+                      <i class="fas fa-circle text-primary"></i> Colima 17.49%
                     </span>
 
 
@@ -1326,7 +1325,7 @@
                   <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
                   </p>
                   <p>* Letalidad en casos positivos acumulados</p>
-                  <p>** Camas disponibles al 28 Julio 2020, Informe diario por Coronavirus en México <a
+                  <p>** Camas disponibles al 29 Julio 2020, Informe diario por Coronavirus en México <a
                       id="reporte_camas"></a>
                   </p>
                   <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
@@ -1411,26 +1410,26 @@
 </body>
 <script>
   var data = {
-    dia_update: "28 de Julio",
-    cant_positivos: "1770",
-    inc_positivos: "+86",
-    cant_activos: "776",
-    inc_activos: "-8",
-    cant_defunciones: "204",
-    inc_defunciones: "+8",
-    cant_recuperados: "806",
-    inc_recuperados: "+86",
-    cant_sospechosos: "82",
-    inc_sospechosos: "-44",
-    tasa_letalidad: "11.53 %",
-    inc_letalidad: "-0.11",
-    cant_camas: "44 %",
-    inc_camas: "-2 %",
-    municipio_mas_positivos: "Colima +25",
+    dia_update: "29 de Julio",
+    cant_positivos: "1824",
+    inc_positivos: "+54",
+    cant_activos: "798",
+    inc_activos: "-22",
+    cant_defunciones: "211",
+    inc_defunciones: "+7",
+    cant_recuperados: "834",
+    inc_recuperados: "+28",
+    cant_sospechosos: "69",
+    inc_sospechosos: "-13",
+    tasa_letalidad: "11.57 %",
+    inc_letalidad: "+0.04",
+    cant_camas: "38 %",
+    inc_camas: "-6 %",
+    municipio_mas_positivos: "Tecomán +21",
     semaforo: "ROJO",
-    prom_defunciones: "2.88",
-    prom_recuperados: "12.06",
-    prom_acumulados: "26.17",
+    prom_defunciones: "2.95",
+    prom_recuperados: "12.31",
+    prom_acumulados: "26.20",
     chart_acumulados_title: " Casos positivos acumulados. Para el día de hoy: ",
     chart_letalidad_title: "Tasa de letalidad en casos positivos acumulados. Para el día de hoy: ",
     chart_recuperados_title: "Promedio de personas recuperadas diariamente: ",
@@ -1438,170 +1437,170 @@
     chart_positivos_title: "Promedio de casos positivos acumulados por día: ",
     defunciones_title: " Defunciones ",
 
-    cant_defunciones_MZO: "105",
-    inc_defunciones_MZO: "+0",
-    porc_defunciones_MZO: "51.47",
-    porc_width_def_MZO: "width: 51%",
-    value_now_def_MZO: "51",
+    cant_defunciones_MZO: "106",
+    inc_defunciones_MZO: "+1",
+    porc_defunciones_MZO: "50.24",
+    porc_width_def_MZO: "width: 50%",
+    value_now_def_MZO: "50",
 
-    cant_defunciones_TEC: "43",
+    cant_defunciones_TEC: "45",
     inc_defunciones_TEC: "+2",
-    porc_defunciones_TEC: "21.08",
+    porc_defunciones_TEC: "21.33",
     porc_width_def_TEC: "width: 21%",
     value_now_def_TEC: "21",
 
     cant_defunciones_VILLA: "14",
-    inc_defunciones_VILLA: "+2",
-    porc_defunciones_VILLA: "6.86",
+    inc_defunciones_VILLA: "+0",
+    porc_defunciones_VILLA: "6.64",
     porc_width_def_VILLA: "width: 7%",
     value_now_def_VILLA: "7",
 
-    cant_defunciones_COL: "22",
-    inc_defunciones_COL: "+3",
-    porc_defunciones_COL: "10.78",
-    porc_width_def_COL: "width: 11%",
-    value_now_def_COL: "11",
+    cant_defunciones_COL: "26",
+    inc_defunciones_COL: "+4",
+    porc_defunciones_COL: "12.32",
+    porc_width_def_COL: "width: 12%",
+    value_now_def_COL: "12",
 
     cant_defunciones_CUA: "3",
     inc_defunciones_CUA: "+0",
-    porc_defunciones_CUA: "1.47",
+    porc_defunciones_CUA: "1.42",
     porc_width_def_CUA: "width: 2%",
     value_now_def_CUA: "2",
 
     cant_defunciones_ARM: "7",
     inc_defunciones_ARM: "+0",
-    porc_defunciones_ARM: "3.43",
+    porc_defunciones_ARM: "3.32",
     porc_width_def_ARM: "width: 3%",
     value_now_def_ARM: "3",
 
     cant_defunciones_COQ: "4",
-    inc_defunciones_COQ: "+1",
-    porc_defunciones_COQ: "1.96",
+    inc_defunciones_COQ: "+0",
+    porc_defunciones_COQ: "1.90",
     porc_width_def_COQ: "width: 2%",
     value_now_def_COQ: "2",
 
     cant_defunciones_MIN: "1",
     inc_defunciones_MIN: "+0",
-    porc_defunciones_MIN: "0.49",
+    porc_defunciones_MIN: "0.47",
     porc_width_def_MIN: "width: 1%",
     value_now_def_MIN: "1",
 
     cant_defunciones_IXT: "3",
     inc_defunciones_IXT: "+0",
-    porc_defunciones_IXT: "1.47",
+    porc_defunciones_IXT: "1.42",
     porc_width_def_IXT: "width: 2%",
     value_now_def_IXT: "2",
 
     cant_defunciones_COM: "2",
     inc_defunciones_COM: "+0",
-    porc_defunciones_COM: "0.98",
+    porc_defunciones_COM: "0.95",
     porc_width_def_COM: "width: 1%",
     value_now_def_COM: "1",
 
     activos_title: " Casos activos ",
 
-    cant_activos_MZO: "159",
-    inc_activos_MZO: "-29",
-    porc_activos_MZO: "20.49",
-    porc_width_act_MZO: "width: 20%",
-    value_now_act_MZO: "20",
+    cant_activos_MZO: "151",
+    inc_activos_MZO: "-8",
+    porc_activos_MZO: "18.92",
+    porc_width_act_MZO: "width: 19%",
+    value_now_act_MZO: "19",
 
-    cant_activos_TEC: "219",
-    inc_activos_TEC: "+4",
-    porc_activos_TEC: "28.22",
-    porc_width_act_TEC: "width: 28%",
-    value_now_act_TEC: "28",
+    cant_activos_TEC: "238",
+    inc_activos_TEC: "+19",
+    porc_activos_TEC: "29.82",
+    porc_width_act_TEC: "width: 30%",
+    value_now_act_TEC: "30",
 
-    cant_activos_VILLA: "143",
-    inc_activos_VILLA: "+6",
-    porc_activos_VILLA: "18.43",
+    cant_activos_VILLA: "146",
+    inc_activos_VILLA: "+3",
+    porc_activos_VILLA: "18.30",
     porc_width_act_VILLA: "width: 18%",
     value_now_act_VILLA: "18",
 
-    cant_activos_COL: "189",
-    inc_activos_COL: "+14",
-    porc_activos_COL: "24.36",
-    porc_width_act_COL: "width: 24%",
-    value_now_act_COL: "24",
+    cant_activos_COL: "196",
+    inc_activos_COL: "+7",
+    porc_activos_COL: "24.56",
+    porc_width_act_COL: "width: 25%",
+    value_now_act_COL: "25",
 
-    cant_activos_CUA: "16",
-    inc_activos_CUA: "+2",
-    porc_activos_CUA: "2.06",
+    cant_activos_CUA: "17",
+    inc_activos_CUA: "+1",
+    porc_activos_CUA: "2.13",
     porc_width_act_CUA: "width: 2%",
     value_now_act_CUA: "2",
 
-    cant_activos_ARM: "14",
-    inc_activos_ARM: "+1",
-    porc_activos_ARM: "1.80",
+    cant_activos_ARM: "13",
+    inc_activos_ARM: "-1",
+    porc_activos_ARM: "1.63",
     porc_width_act_ARM: "width: 2%",
     value_now_act_ARM: "2",
 
-    cant_activos_COQ: "15",
-    inc_activos_COQ: "-4",
-    porc_activos_COQ: "1.93",
+    cant_activos_COQ: "16",
+    inc_activos_COQ: "+1",
+    porc_activos_COQ: "2.02",
     porc_width_act_COQ: "width: 2%",
     value_now_act_COQ: "2",
 
-    cant_activos_MIN: "4",
-    inc_activos_MIN: "-1",
-    porc_activos_MIN: "0.52",
+    cant_activos_MIN: "2",
+    inc_activos_MIN: "-2",
+    porc_activos_MIN: "0.25",
     porc_width_act_MIN: "width: 1%",
     value_now_act_MIN: "1",
 
-    cant_activos_IXT: "10",
+    cant_activos_IXT: "9",
     inc_activos_IXT: "-1",
-    porc_activos_IXT: "1.29",
+    porc_activos_IXT: "1.13",
     porc_width_act_IXT: "width: 1%",
     value_now_act_IXT: "1",
 
-    cant_activos_COM: "7",
-    inc_activos_COM: "+0",
-    porc_activos_COM: "0.90",
+    cant_activos_COM: "10",
+    inc_activos_COM: "+3",
+    porc_activos_COM: "1.25",
     porc_width_act_COM: "width: 1%",
     value_now_act_COM: "1",
 
     positivos_title: "Total de casos positivos acumulados por municipio, para el día de hoy ",
-    cant_positivos_MZO: "702",
-    inc_positivos_MZO: "+25",
-    porc_positivos_MZO: "29.07",
-    porc_width_pos_MZO: "width: 29%",
-    value_now_pos_MZO: "29",
+    cant_positivos_MZO: "714",
+    inc_positivos_MZO: "+12",
+    porc_positivos_MZO: "22.22",
+    porc_width_pos_MZO: "width: 22%",
+    value_now_pos_MZO: "22",
 
-    cant_positivos_TEC: "389",
-    inc_positivos_TEC: "+17",
-    porc_positivos_TEC: "19.77",
-    porc_width_pos_TEC: "width: 20%",
-    value_now_pos_TEC: "20",
+    cant_positivos_TEC: "410",
+    inc_positivos_TEC: "+21",
+    porc_positivos_TEC: "38.89",
+    porc_width_pos_TEC: "width: 39%",
+    value_now_pos_TEC: "39",
 
-    cant_positivos_VILLA: "235",
-    inc_positivos_VILLA: "+14",
-    porc_positivos_VILLA: "16.28",
-    porc_width_pos_VILLA: "width: 16%",
-    value_now_pos_VILLA: "16",
+    cant_positivos_VILLA: "241",
+    inc_positivos_VILLA: "+6",
+    porc_positivos_VILLA: "11.11",
+    porc_width_pos_VILLA: "width: 11%",
+    value_now_pos_VILLA: "11",
 
-    cant_positivos_COL: "310",
-    inc_positivos_COL: "+25",
-    porc_positivos_COL: "29.07",
-    porc_width_pos_COL: "width: 29%",
-    value_now_pos_COL: "29",
+    cant_positivos_COL: "319",
+    inc_positivos_COL: "+9",
+    porc_positivos_COL: "16.67",
+    porc_width_pos_COL: "width: 17%",
+    value_now_pos_COL: "17",
 
-    cant_positivos_CUA: "28",
+    cant_positivos_CUA: "30",
     inc_positivos_CUA: "+2",
-    porc_positivos_CUA: "2.33",
-    porc_width_pos_CUA: "width: 2%",
-    value_now_pos_CUA: "2",
+    porc_positivos_CUA: "2.70",
+    porc_width_pos_CUA: "width: 3%",
+    value_now_pos_CUA: "3",
 
-    cant_positivos_ARM: "35",
-    inc_positivos_ARM: "+1",
-    porc_positivos_ARM: "1.16",
-    porc_width_pos_ARM: "width: 1%",
-    value_now_pos_ARM: "1",
+    cant_positivos_ARM: "0",
+    inc_positivos_ARM: "+0",
+    porc_positivos_ARM: "0",
+    porc_width_pos_ARM: "width: 0%",
+    value_now_pos_ARM: "0",
 
-    cant_positivos_COQ: "29",
+    cant_positivos_COQ: "30",
     inc_positivos_COQ: "+1",
-    porc_positivos_COQ: "1.16",
-    porc_width_pos_COQ: "width: 1%",
-    value_now_pos_COQ: "1",
+    porc_positivos_COQ: "1.85",
+    porc_width_pos_COQ: "width: 2%",
+    value_now_pos_COQ: "2",
 
     cant_positivos_MIN: "0",
     inc_positivos_MIN: "+0",
@@ -1615,13 +1614,13 @@
     porc_width_pos_IXT: "width: 0%",
     value_now_pos_IXT: "0",
 
-    cant_positivos_COM: "16",
-    inc_positivos_COM: "+1",
-    porc_positivos_COM: "1.16",
-    porc_width_pos_COM: "width: 1%",
-    value_now_pos_COM: "1",
-    url_youtube: "https://www.youtube.com/watch?v=OyP6nW5Jqws",
-    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-280720.pdf"
+    cant_positivos_COM: "19",
+    inc_positivos_COM: "+3",
+    porc_positivos_COM: "5.56",
+    porc_width_pos_COM: "width: 6%",
+    value_now_pos_COM: "6",
+    url_youtube: "https://www.youtube.com/watch?v=1T2LpBsIfcQ",
+    url_reporte: "http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-290720.pdf"
 
   }
 
