@@ -1,15 +1,15 @@
-var valeur = [12, 21, 6, 9, 2, 0, 1, 0, 0, 3];
+var valeur = [11, 7, 6, 12, 0, 1, 0, 0, 0, 0];
 var date = [
-    "Manzanillo 22.22%",
-    "Tecomán 38.89%",
-    "V. De A. 11.11%",
-    "Colima 16.67%",
-    "Cuauhtémoc 3.70%",
-    "Armería 0%",
-    "Coquimatlán 1.85%",
+    "Manzanillo 29.73%",
+    "Tecomán 18.92%",
+    "V. De A. 16.22%",
+    "Colima 32.43%",
+    "Cuauhtémoc 0%",
+    "Armería 2.70%",
+    "Coquimatlán 0%",
     "Minatitlán 0%",
     "Ixtlahuacán 0%",
-    "Comala 5.56%"
+    "Comala 0%"
 
 ];
 
