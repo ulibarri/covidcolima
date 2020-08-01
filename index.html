@@ -1324,8 +1324,7 @@
                   <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
                   </p>
                   <p>* Letalidad en casos positivos acumulados</p>
-                  <p>** Camas disponibles al 29 Julio 2020, Informe diario por Coronavirus en México <a
-                      id="reporte_camas"></a>
+                  <p id="leyenda_camas"><a id="reporte_camas"></a>
                   </p>
                   <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
 
@@ -1409,6 +1408,8 @@
 </body>
 <script>
   var data = {
+    dia: " 1 ",
+    mes: " Agosto ",
     dia_update: "1 de Ago",
     cant_positivos: "1895",
     inc_positivos: "+34",
@@ -1435,6 +1436,7 @@
     chart_defunciones_title: "Promedio de defunciones diarias: ",
     chart_positivos_title: "Promedio de casos positivos acumulados por día: ",
     defunciones_title: " Defunciones ",
+    camas_title: "** Camas disponibles al ",
 
     cant_defunciones_MZO: "109",
     inc_defunciones_MZO: "+2",
@@ -1777,6 +1779,8 @@
   document.getElementById("num_reporte").innerHTML = data.url_reporte;
   document.getElementById("reporte_camas").setAttribute("href", data.url_youtube);
   document.getElementById("reporte_camas").innerHTML = data.url_youtube;
+  document.getElementById("leyenda_camas").innerHTML = data.camas_title + data.dia + data.mes + "2020, Informe diario por Coronavirus en México";
+
 
 </script>
 
