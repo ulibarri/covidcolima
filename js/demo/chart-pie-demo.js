@@ -9,7 +9,7 @@ var myPieChart = new Chart(ctx, {
   data: {
     labels: ["Manzanillo", "Tecomán", "V. Álvarez", "Colima"],
     datasets: [{
-      data: [732, 426, 254, 340],
+      data: [752, 433, 258, 360],
       backgroundColor: ['#e74a3b', '#1cc88a', '#36b9cc', '#4e73df'],
       hoverBackgroundColor: ['#fd7e14', '#17a673', '#2c9faf', '#2e59d9'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -47,7 +47,7 @@ var myPieChart = new Chart(ctx, {
   data: {
     labels: ["Hombres", "Mujeres"],
     datasets: [{
-      data: [127, 69],
+      data: [147, 81],
       backgroundColor: ['#13855c', '#6f42c1'],
       hoverBackgroundColor: ['#1cc88a', '#9b7cd4'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
