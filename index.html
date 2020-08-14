@@ -39,7 +39,15 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.19.3/apexcharts.js">
 
+  <style>
+    #chart_edades_totales {
+      margin: 0 auto;
+    }
 
+    #chart_edades_totales_mujeres {
+      margin: 0 auto;
+    }
+  </style>
 
 
 </head>
@@ -649,6 +657,87 @@
             </div>
           </div>
 
+          <!-- rangos de edades -->
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Defunciones totales por edad</h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-totales-edad"></canvas>
+                  </div>
+                  <!-- <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 52.63%
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle" style="color: #6f42c1;"></i> Mujeres 36.84%
+                    </span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Defunciones mujeres + edad </h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-mujeres-edad"></canvas>
+                  </div>
+                  <!-- <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 52.63%
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle" style="color: #6f42c1;"></i> Mujeres 36.84%
+                    </span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Defunciones hombres + edad</h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-hombres-edad"></canvas>
+                  </div>
+                  <!-- <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 52.63%
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle" style="color: #6f42c1;"></i> Mujeres 36.84%
+                    </span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <!-- numerotes -->
 
           <div class="row">
@@ -1127,6 +1216,7 @@
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="js/demo/chart-compare-demo.js"></script>
   <script src="js/demo/chart-column-demo.js"></script>
+  <!-- <script src="js/demo/chart-edades.js"></script> -->
 
 </body>
 <script>
@@ -1352,7 +1442,10 @@
     cant_tot_activos_VILLA: '383',
     cant_tot_activos_COL: '522',
     date: 'TRUE',
-    valeur: '16,12,10,10,0,0,0,1,2,0'
+    valeur: '16,12,10,10,0,0,0,1,2,0',
+    news: [
+      '<div class="row"> <div class="col-xl-12 col-lg-12"> <div class="card shadow mb-4"> <div class="card-body"><div class="row no-gutters align-items-center"><div class="col mr-2"><div class="text-s font-weight-bold text-danger text-uppercase mb-1">Tercer día consecutivo en el que el Estado de Colima cuenta con el menor porcentaje de disponibilidad para camas con ventiladores en todo el país </div><div class="h5 mb-0 font-weight-bold text-gray-800">33%</div></div><div class="col-auto"><i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i></div></div></div></div></div></div>}'
+    ]
   }
   // {
   //   dia: '9',
