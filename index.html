@@ -124,7 +124,7 @@
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-3 col-md-6 mb-2">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -666,11 +666,12 @@
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 52.63%
-                    </span>
-                    <span class="mr-2">
                       <i class="fas fa-circle" style="color: #6f42c1;"></i> Mujeres 36.84%
                     </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 52.63%
+                    </span>
+
                   </div>
                 </div>
               </div>
@@ -711,26 +712,7 @@
                     <canvas id="defunciones-totales-edad"></canvas>
                   </div>
 
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #3498DB;"> </i> 0--40 6.3 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #512E5F;"></i> 41--50 8.5 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #1B4F72;"> </i> 51--60 24.1 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D4AC0D;"></i> 61-70 26.9%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #0E6251;"> </i> 71-80 21.5%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D35400;"></i> 80+ 12.3%
-                    </span>
-
+                  <div id="porc_def_tot" class="mt-4 text-center small">
 
                   </div>
                 </div>
@@ -751,25 +733,8 @@
                   <div class="chart-pie pt-4 pb-2">
                     <canvas id="defunciones-mujeres-edad"></canvas>
                   </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #3498DB;"> </i> 0--40 5.1 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #512E5F;"></i> 41--50 6.8 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #1B4F72;"> </i> 51--60 20.6 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D4AC0D;"></i> 61-70 32.7%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #0E6251;"> </i> 71-80 20.6%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D35400;"></i> 80+ 11.7%
-                    </span>
+                  <div id="porc_def_tot_muj" class="mt-4 text-center small">
+
                   </div>
                 </div>
               </div>
@@ -788,25 +753,8 @@
                   <div class="chart-pie pt-4 pb-2">
                     <canvas id="defunciones-hombres-edad"></canvas>
                   </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #3498DB;"> </i> 0--40 6.3 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #512E5F;"></i> 41--50 8.5 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #1B4F72;"> </i> 51--60 24.1 %
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D4AC0D;"></i> 61-70 26.9%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle " style="color: #0E6251;"> </i> 71-80 21.5%
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle" style="color: #D35400;"></i> 80+ 12.3%
-                    </span>
+                  <div id="porc_def_tot_hom" class="mt-4 text-center small">
+
                   </div>
                 </div>
               </div>
@@ -1526,24 +1474,24 @@
     defunciones_totales: '24, 27, 75, 83, 67, 42',
     defunciones_totales_mujeres: '6, 8, 24, 38, 24, 16',
     defunciones_totales_hombres: '18, 19, 51, 45, 43, 26',
-    porc_defunciones_tot_rango_uno: '6.3%',
-    porc_defunciones_tot_rango_dos: '8.5%',
-    porc_defunciones_tot_rango_tres: '24.1%',
-    porc_defunciones_tot_rango_cuatro: '26.9%',
-    porc_defunciones_tot_rango_cinco: '21.5%',
-    porc_defunciones_tot_rango_seis: '12.3%',
-    porc_defunciones_tot_hom_rango_uno: '7.2%',
-    porc_defunciones_tot_hom_rango_dos: '9.7%',
-    porc_defunciones_tot_hom_rango_tres: '26.2%',
-    porc_defunciones_tot_hom_rango_cuatro: '23.1%',
-    porc_defunciones_tot_hom_rango_cinco: '22.1%',
-    porc_defunciones_tot_hom_rango_seis: '11.3%',
-    porc_defunciones_tot_muj_rango_uno: '5.1%',
-    porc_defunciones_tot_muj_rango_dos: '6.8%',
-    porc_defunciones_tot_muj_rango_tres: '20.6%',
-    porc_defunciones_tot_muj_rango_cuatro: '32.7%',
-    porc_defunciones_tot_muj_rango_cinco: '20.6%',
-    porc_defunciones_tot_muj_rango_seis: '13.7%'
+    porc_defunciones_tot_rango_uno: '6.3',
+    porc_defunciones_tot_rango_dos: '8.5',
+    porc_defunciones_tot_rango_tres: '24.1',
+    porc_defunciones_tot_rango_cuatro: '26.9',
+    porc_defunciones_tot_rango_cinco: '21.5',
+    porc_defunciones_tot_rango_seis: '12.3',
+    porc_defunciones_tot_hom_rango_uno: '7.2',
+    porc_defunciones_tot_hom_rango_dos: '9.7',
+    porc_defunciones_tot_hom_rango_tres: '26.2',
+    porc_defunciones_tot_hom_rango_cuatro: '23.1',
+    porc_defunciones_tot_hom_rango_cinco: '22.1',
+    porc_defunciones_tot_hom_rango_seis: '11.3',
+    porc_defunciones_tot_muj_rango_uno: '5.1',
+    porc_defunciones_tot_muj_rango_dos: '6.8',
+    porc_defunciones_tot_muj_rango_tres: '20.6',
+    porc_defunciones_tot_muj_rango_cuatro: '32.7',
+    porc_defunciones_tot_muj_rango_cinco: '20.6',
+    porc_defunciones_tot_muj_rango_seis: '13.7'
 
   }
 
@@ -1708,9 +1656,36 @@
 
   var mun_MZO = "<span class=\"mr-2\"> <i class=\"fas fa-circle text-danger\"></i> Manzanillo " + data.porc_tot_activos_MZO + "%</span>";
   var mun_TEC = "<span class=\"mr-2\"><i class=\"fas fa-circle text-success\"></i> Tecomán " + data.porc_tot_activos_TEC + "%</span>";
-  var mun_VILLA = "<span class=\"mr-2\"><i class=\"fas fa-circle text-info\"></i> V. Álvarez " + data.porc_tot_activos_VILLA + "%</span>"
-  var mun_COL = "<span class=\"mr-2\"><i class=\"fas fa-circle text-primary\"></i> Colima " + data.porc_tot_activos_COL + "%</span>"
-  document.getElementById("pos_acum_Municipio").innerHTML = mun_MZO + mun_TEC + mun_VILLA + mun_COL
+  var mun_VILLA = "<span class=\"mr-2\"><i class=\"fas fa-circle text-info\"></i> V. Álvarez " + data.porc_tot_activos_VILLA + "%</span>";
+  var mun_COL = "<span class=\"mr-2\"><i class=\"fas fa-circle text-primary\"></i> Colima " + data.porc_tot_activos_COL + "%</span>";
+
+  var def_tot_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\" ></i>  0--40 <strong>" + data.porc_defunciones_tot_rango_uno + " %</strong></span>";
+  var def_tot_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\" ></i>  41--50 <strong>" + data.porc_defunciones_tot_rango_dos + " %</strong></span>";
+  var def_tot_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_rango_tres + " %</strong></span>";
+  var def_tot_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\" ></i>  61-70 <strong>" + data.porc_defunciones_tot_rango_cuatro + " %</strong></span>";
+  var def_tot_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_rango_cinco + " %</strong></span>";
+  var def_tot_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_rango_seis + " %</strong></span>";
+
+
+  var def_tot_muj_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\"></i>  0--40 <strong>" + data.porc_defunciones_tot_muj_rango_uno + " %</strong></span>";
+  var def_tot_muj_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\"></i>  41--50 <strong>" + data.porc_defunciones_tot_muj_rango_dos + " %</strong></span>";
+  var def_tot_muj_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_muj_rango_tres + " %</strong></span>";
+  var def_tot_muj_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\"></i>  61-70 <strong>" + data.porc_defunciones_tot_muj_rango_cuatro + " %</strong></span>";
+  var def_tot_muj_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_muj_rango_cinco + " %</strong></span>";
+  var def_tot_muj_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_muj_rango_seis + " %</strong></span>";
+
+  var def_tot_hom_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\"></i>  0--40 <strong>" + data.porc_defunciones_tot_hom_rango_uno + " %</strong></span>";
+  var def_tot_hom_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\"></i>  41--50 <strong>" + data.porc_defunciones_tot_hom_rango_dos + " %</strong></span>";
+  var def_tot_hom_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_hom_rango_tres + " %</strong></span>";
+  var def_tot_hom_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\"></i>  61-70 <strong>" + data.porc_defunciones_tot_hom_rango_cuatro + " %</strong></span>";
+  var def_tot_hom_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_hom_rango_cinco + " %</strong></span>";
+  var def_tot_hom_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_hom_rango_seis + " %</strong></span>";
+
+
+  document.getElementById("porc_def_tot").innerHTML = def_tot_ran1 + def_tot_ran2 + def_tot_ran3 + def_tot_ran4 + def_tot_ran5 + def_tot_ran6;
+  document.getElementById("porc_def_tot_muj").innerHTML = def_tot_muj_ran1 + def_tot_muj_ran2 + def_tot_muj_ran3 + def_tot_muj_ran4 + def_tot_muj_ran5 + def_tot_muj_ran6;
+  document.getElementById("porc_def_tot_hom").innerHTML = def_tot_hom_ran1 + def_tot_hom_ran2 + def_tot_hom_ran3 + def_tot_hom_ran4 + def_tot_hom_ran5 + def_tot_hom_ran6;
+  document.getElementById("pos_acum_Municipio").innerHTML = mun_MZO + mun_TEC + mun_VILLA + mun_COL;
 
 
 </script>
