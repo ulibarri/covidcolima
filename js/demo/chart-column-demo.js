@@ -1,6 +1,6 @@
-var valeur = [18, 19, 7, 11, 2, 0, 2, 0, 1, 2];
+var valeur = [16, 31, 14, 9, 2, 1, 2, 0, 2, 2];
 var date = [
-    "Mzo. 29.03%", "Tecomán 30.64%", "V. de A. 11.29%,", "Colima 17.74%", "Cuauh 3.22%", "Armería 0%", "Coqui 3.22%", "Mina 0%", "Ixtla 1.61%", "Comala 3.22%"
+    "Mzo. 20.25%", "Tecomán 39.24%", "V. de A. 17.72%,", "Colima 11.39%", "Cuauh 2.53%", "Armería 1.26%", "Coqui 2.53%", "Mina 0%", "Ixtla 2.53%", "Comala 2.53%"
 ];
 
 var options = {
