@@ -47,7 +47,7 @@ var myPieChart = new Chart(ctx, {
   data: {
     labels: ["Hombres", "Mujeres"],
     datasets: [{
-      data: [180, 105],
+      data: [222, 139],
       backgroundColor: ['#13855c', '#6f42c1'],
       hoverBackgroundColor: ['#1cc88a', '#9b7cd4'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -86,7 +86,7 @@ var myPieChart = new Chart(ctx3, {
   data: {
     labels: ["0-40 años", "41-50  años", "51-60  años", "61-70  años", "71-80  años", "81+  años"],
     datasets: [{
-      data: [24, 27, 75, 83, 67, 42],
+      data: [24, 30, 92, 90, 82, 43],
       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
       hoverBackgroundColor: ['#D6EAF8', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -125,7 +125,7 @@ var myPieChart = new Chart(ctx4, {
   data: {
     labels: ["0-40 años", "41-50  años", "51-60  años", "61-70  años", "71-80  años", "81+  años"],
     datasets: [{
-      data: [6, 8, 24, 38, 24, 16],
+      data: [8, 8, 32, 41, 32, 18],
       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
       hoverBackgroundColor: ['#D6EAF8', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -164,7 +164,7 @@ var myPieChart = new Chart(ctx5, {
   data: {
     labels: ["0-40 años", "41-50  años", "51-60  años", "61-70  años", "71-80  años", "81+  años"],
     datasets: [{
-      data: [18, 19, 51, 45, 43, 26],
+      data: [16, 22, 60, 49, 50, 25],
       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
       hoverBackgroundColor: ['#D6EAF8', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
