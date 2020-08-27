@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108255572-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108255572-2');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WX84Q32XF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1WX84Q32XF');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>COVID 19 Colima 2020</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.19.3/apexcharts.js">
+
+  <style>
+    #chart_edades_totales {
+      margin: 0 auto;
+    }
+
+    #chart_edades_totales_mujeres {
+      margin: 0 auto;
+    }
+  </style>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> -->
+
+    <!-- Divider -->
+    <!-- <hr class="sidebar-divider my-0"> -->
+
+    <!-- Divider -->
+    <!-- <hr class="sidebar-divider"> -->
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <!-- <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div> -->
+
+    <!-- </ul> -->
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+
+
+            </li>
+
+
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"> <i class="fas fa-virus fa-2x text-black-300"></i> COVID-19 Colima</h1>
+            <h7 class="mb-0 text-gray-800" id="dia_update"></h7>
+
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_positivos" class="text-s font-weight-bold text-primary text-uppercase mb-1">Casos
+                        positivos
+                        acumulados: +</div>
+                      <div id="cant_positivos" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+                      <!-- <i class="fas fa-calendar fa-2x text-gray-300"></i> -->
+
+                      <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_activos" class="text-s font-weight-bold text-success text-uppercase mb-1">Casos
+                        Activos: </div>
+                      <div id="cant_activos" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-virus fa-2x text-gray-300"></i>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_defunciones" class="text-s font-weight-bold text-info text-uppercase mb-1">
+                        Defunciones: +</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div id="cant_defunciones" class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
+                        </div>
+                        <!-- <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="13"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-cloud-upload-alt fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_recuperados" class="text-s font-weight-bold text-warning text-uppercase mb-1">
+                        Recuperados: +</div>
+                      <div id="cant_recuperados" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-child fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_sospechosos" class="text-s font-weight-bold text-danger text-uppercase mb-1">
+                        Sospechosos: </div>
+                      <div id="cant_sospechosos" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+
+                      <i class="fas fa-search fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_letalidad" class="text-s font-weight-bold text-primary text-uppercase mb-1">Letalidad
+                        en casos
+                        positivos acumulados: </div>
+                      <div id="tasa_letalidad" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+
+                      <i class="fas fa-biohazard fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div id="inc_camas" class="text-s font-weight-bold text-success text-uppercase mb-1">Camas con
+                        ventilador
+                        disponibles: </div>
+                      <div id="cant_camas" class="h5 mb-0 font-weight-bold text-gray-800"> </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-bed fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-info text-uppercase mb-1">Municipio con más casos
+                        positivos acumulados: </div>
+                      <div id="municipio_mas_positivos" class="h5 mb-0 font-weight-bold text-gray-800">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-trophy fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Información importante
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <a href="https://youtu.be/vpvQ-95sz5I">https://youtu.be/vpvQ-95sz5I</a></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">El día de hoy, Colima tiene
+                        la menor cantidad de camas con ventilador disponibles en todo el país
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        34%</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Se rompe la barrera de 1,000
+                        casos
+                        positivos acumulados
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        1012</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-danger text-uppercase mb-1">Semáforo epidemiológico:
+                      </div>
+                      <div id="semaforo" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-traffic-light fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-danger text-uppercase mb-1">Tercer día consecutivo en
+                        el que el Estado de
+                        Colima cuenta con el menor porcentaje de disponibilidad para camas con ventiladores en todo el
+                        país
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        33%
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Máximo registro de
+                        defunciones en el Estado en lo que va de la pandemia
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        +14
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Máximo registro de
+                        casos positivos acumulados en un sólo dia para el municipio de Colima en lo que va de la
+                        pandemia
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        +30
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-danger text-uppercase mb-1">El Estado reporta el mayor
+                        incremento en la
+                        cantidad de casos positivos acumulados durante toda la pandemia
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        +141
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-danger text-uppercase mb-1">Hoy se registra el mayor
+                        número de defunciones para un sólo día durante toda la pandemia
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        +15
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Opinión experta
+                        que debes conocer respecto al COVID-19
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <a href="https://youtu.be/vpvQ-95sz5I">https://youtu.be/vpvQ-95sz5I</a>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <!-- <div class="row">
+
+
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 id="chart_acumulados_title" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h5 id="positivos-defunciones" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="chart">
+                    <div id="chart-positivos-defunciones"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ----------------- -->
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <!-- grafica letalidad -->
+                  <h5 id="chart_letalidad_title" class="m-0 font-weight-bold text-primary"></h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area2">
+                    <canvas id="myAreaChart2"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //--------------- -->
+          <!-- ----------------- -->
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <!-- grafica recuperados -->
+                  <h5 id="chart_recuperados_title" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area3">
+                    <canvas id="myAreaChart3"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //--------------- -->
+
+          <!-- defunciones -->
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <!-- grafica defunciones -->
+                  <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart4"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- acumulados por dia -->
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between text-center">
+                  <!-- grafica de positivos acumulados -->
+                  <h5 id="chart_positivos_title" class="m-0 font-weight-bold text-primary">
+                  </h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart5"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <!-- <div class="col-xl-12 col-lg-12 mb-4"> -->
+            <!-- Pie Chart -->
+            <div class="col-lg-6 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Casos positivos acumulados por municipio</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div id="pos_acum_Municipio" class="mt-4 text-center small">
+
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Defunciones Mujeres Vs. Hombres</h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="mySexPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle" style="color: #6f42c1;"></i> Mujeres 38.5%
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle " style="color: #13855c;"> </i> Hombres 61.4%
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 text-center">
+
+                      <div class="h5 mb-0 font-weight-bold text-primary-800 text-primary">
+                        Defunciones
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- rangos de edades -->
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Totales por edad</h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-totales-edad"></canvas>
+                  </div>
+
+                  <div id="porc_def_tot" class="mt-4 text-center small">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary"> Mujeres por edad </h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-mujeres-edad"></canvas>
+                  </div>
+                  <div id="porc_def_tot_muj" class="mt-4 text-center small">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Hombres por edad</h5>
+                  <div class="dropdown no-arrow">
+
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="defunciones-hombres-edad"></canvas>
+                  </div>
+                  <div id="porc_def_tot_hom" class="mt-4 text-center small">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- numerotes -->
+
+          <div class="row">
+            <!-- <div class="col-xl-12 col-lg-12 mb-4"> -->
+            <!-- defunciones obesidad -->
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4 ">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between ">
+                  <h5 class="m-0 font-weight-bold text-primary ">Obesidad: 146 +35</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="mt-4 text-center xlarge">
+                    <h1 class="text-success" style="font-size: 350%;"><strong>40.4%</strong></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Hipertensión: 197 +40</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="mt-4 text-center xlarge">
+                    <h1 class="text-success" style="font-size: 350%;"><strong>54.5%</strong></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Diabetes: 146 +33</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="mt-4 text-center xlarge">
+                    <h1 class="text-success" style="font-size: 350%;"><strong>40.4%</strong></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <!-- numerotes -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+
+              <!-- Project Card Example -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <!-- ================================================================================ Tabla de  D E F U N C I O N E S -->
+                  <h5 id="defunciones_title" class="m-0 font-weight-bold text-primary"></h5>
+                </div>
+                <div class="card-body">
+                  <h6 id="defunciones_MZO" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_MZO" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="defunciones_TEC" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_TEC" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <h6 id="defunciones_VILLA" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_VILLA" class="progress-bar" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="defunciones_COL" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_COL" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <h6 id="defunciones_CUA" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_CUA" class="progress-bar bg-success" role="progressbar" style="width: 2%"
+                      aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="defunciones_ARM" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_ARM" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+
+                  <h6 id="defunciones_COQ" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_COQ" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="defunciones_MIN" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_MIN" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="defunciones_IXT" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_IXT" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+
+                  <h6 id="defunciones_COM" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_def_COM" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+
+                  <!-- 
+                  <h6 id="defunciones_COM" class=" font-weight-bold">Comala -> 0 <span class="float-right">0%</span></h6>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div> -->
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <!-- -----------------------------------------==================================----------TABLA A C T I V O S -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h5 id="activos_title" class="m-0 font-weight-bold text-primary"></h5>
+                </div>
+                <div class="card-body">
+                  <h6 id="activos_MZO" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_MZO" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <h6 id="activos_TEC" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_TEC" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <h6 id="activos_VILLA" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_VILLA" class="progress-bar" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="activos_COL" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_COL" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+
+                  <h6 id="activos_CUA" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_CUA" class="progress-bar bg-success" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="activos_ARM" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_ARM" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="activos_COQ" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_COQ" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="activos_MIN" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_MIN" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="activos_IXT" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_IXT" class="progress-bar" role="progressbar" aria-valuemin="4" aria-valuemax="100">
+                    </div>
+                  </div>
+
+                  <h6 id="activos_COM" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_act_COM" class="progress-bar bg-success" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- ++++++++++++++++++++++A P E X     C H A R T ++++++++++++ -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
+                    Comparación de casos positivos acumulados en Villa de Álvarez, Colima, Tecomán y Manzanillo</h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div id="chart">
+                    <div id="timeline-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++barra de columnas -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h5 id="chart_defunciones_title" class="m-0 font-weight-bold text-primary">
+                    Incremento de casos positivos acumulados por municipio para el día de hoy</h5>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <!-- <div class="chart-area">
+          <canvas id="myChart"></canvas>
+        </div> -->
+                  <div id="chart">
+                    <div id="chart-column"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ++++++++++++++++++++++++++++++++++ fin barra de columnas-->
+
+          <!-- ++++++++++++++++++++++++++++++++++ -->
+          <!-- <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-bar">
+                    <canvas id="myBarChart"></canvas>
+                  </div>
+                  <hr>
+                  Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- -----------------------------------------------------------------TABLA INCREMENTO POSITIVOS ACUMULADOS -->
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h5 id="positivos_title" class="m-0 font-weight-bold text-primary"></h5>
+                </div>
+                <div class="card-body">
+                  <h6 id="positivos_MZO" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_MZO" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_TEC" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_TEC" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_VILLA" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_VILLA" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_COL" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_COL" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+
+                  <h6 id="positivos_CUA" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_CUA" class="progress-bar bg-success" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_ARM" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_ARM" class="progress-bar bg-danger" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+
+                  <h6 id="positivos_COQ" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_COQ" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_MIN" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_MIN" class="progress-bar bg-info" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <h6 id="positivos_IXT" class=" font-weight-bold">
+                  </h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_IXT" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+
+                  <h6 id="positivos_COM" class=" font-weight-bold"></h6>
+                  <div class="progress mb-4">
+                    <div id="bar_pos_COM" class="progress-bar bg-success" role="progressbar" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-6 mb-4">
+              <!-- Illustrations -->
+              <!-- <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                      src="img/undraw_posting_photo.svg" alt="">
+                  </div>
+                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow"
+                      href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that
+                    you can use completely free and without attribution!</p>
+                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
+                </div>
+              </div> -->
+
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h5 class="m-0 font-weight-bold text-primary">Fuente</h5>
+                </div>
+                <div class="card-body">
+                  <p style="text-align: justify;">Los datos aquí representados fueron tomados de las publicaciones
+                    diarias del
+                    Gobierno del Estado de Colima en <a
+                      href="http://www.saludcolima.gob.mx/coronavirus/ ">http://www.saludcolima.gob.mx/coronavirus/
+                    </a>a partir del 26 de Mayo 2020.</p>
+                  <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
+                  </p>
+                  <p>* Letalidad en casos positivos acumulados</p>
+                  <p id="leyenda_camas"><a id="reporte_camas"></a>
+                  </p>
+                  <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
+
+
+                  <!-- <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap
+                    framework, especially the utility classes.</p> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- aqui termina la fuente -->
+          </div>
+          <!-- -----------------------------------------------------------------fin de  TABLA INCREMENTO POSITIVOS ACUMULADOS-->
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; COVID 19 Colima 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-compare-demo.js"></script>
+  <script src="js/demo/chart-column-demo.js"></script>
+  <!-- <script src="js/demo/chart-edades.js"></script> -->
+
+</body>
+<script>
+
+  var data = {
+    dia: '25',
+    mes: 'Agosto',
+    dia_update: '25 de Agosto',
+    cant_positivos: '3342',
+    inc_positivos: '35',
+    cant_activos: '674',
+    inc_activos: '-59',
+    cant_defunciones: '402',
+    inc_defunciones: '15',
+    cant_sospechosos: '128',
+    inc_sospechosos: '+46',
+    cant_recuperados: '2304',
+    inc_recuperados: '83',
+    tasa_letalidad: '12.03',
+    inc_letalidad: '+0.38',
+    cant_camas: '45%',
+    inc_camas: '+7%',
+    municipio_mas_positivos: 'Manzanillo +13',
+    semaforo: 'ROJO',
+    prom_defunciones: '4.2',
+    prom_acumulados: '35.40',
+    prom_recuperados: '24.81',
+    chart_acumulados_title: 'Casos positivos acumulados. Para el día de hoy: ',
+    chart_letalidad_title: 'Tasa de letalidad en casos positivos acumulados. Para el día de hoy: ',
+    chart_recuperados_title: 'Personas recuperadas para el día de hoy: +',
+    chart_defunciones_title: 'Defunciones para el día de hoy: +',
+    chart_positivos_title: 'Casos positivos acumulados para el día de hoy: +',
+    defunciones_title: ' Defunciones totales, hoy +',
+    camas_title: '** Camas disponibles al ',
+    cant_defunciones_MZO: '160',
+    inc_defunciones_MZO: '5',
+    porc_defunciones_MZO: '39.80',
+    porc_width_def_MZO: 'width: 40%',
+    value_now_def_MZO: '40',
+
+    cant_defunciones_TEC: '85',
+    inc_defunciones_TEC: '1',
+    porc_defunciones_TEC: '21.14',
+    porc_width_def_TEC: 'width: 21%',
+    value_now_def_TEC: '21',
+
+    cant_defunciones_VILLA: '37',
+    inc_defunciones_VILLA: '1',
+    porc_defunciones_VILLA: '9.20',
+    porc_width_def_VILLA: 'width: 9%',
+    value_now_def_VILLA: '9',
+
+    cant_defunciones_COL: '79',
+    inc_defunciones_COL: '6',
+    porc_defunciones_COL: '19.65',
+    porc_width_def_COL: 'width: 20%',
+    value_now_def_COL: '20',
+
+    cant_defunciones_CUA: '6',
+    inc_defunciones_CUA: '0',
+    porc_defunciones_CUA: '1.49',
+    porc_width_def_CUA: 'width: 2%',
+    value_now_def_CUA: '2',
+
+    cant_defunciones_ARM: '14',
+    inc_defunciones_ARM: '0',
+    porc_defunciones_ARM: '3.48',
+    porc_width_def_ARM: 'width: 4%',
+    value_now_def_ARM: '4',
+
+    cant_defunciones_COQ: '7',
+    inc_defunciones_COQ: '1',
+    porc_defunciones_COQ: '1.74',
+    porc_width_def_COQ: 'width: 2%',
+    value_now_def_COQ: '2',
+
+    cant_defunciones_MIN: '2',
+    inc_defunciones_MIN: '0',
+    porc_defunciones_MIN: '0.50',
+    porc_width_def_MIN: 'width: 1%',
+    value_now_def_MIN: '1',
+
+    cant_defunciones_IXT: '4',
+    inc_defunciones_IXT: '1',
+    porc_defunciones_IXT: '1.00',
+    porc_width_def_IXT: 'width: 1%',
+    value_now_def_IXT: '1',
+
+    cant_defunciones_COM: '8',
+    inc_defunciones_COM: '0',
+    porc_defunciones_COM: '1.99',
+    porc_width_def_COM: 'width: 2%',
+    value_now_def_COM: '2',
+
+    activos_title: ' Casos activos totales, hoy ',
+    cant_activos_MZO: '154',
+    inc_activos_MZO: '-4',
+    porc_activos_MZO: '22.85',
+    porc_width_act_MZO: 'width: 23%',
+    value_now_act_MZO: '23',
+
+    cant_activos_TEC: '80',
+    inc_activos_TEC: '-24',
+    porc_activos_TEC: '11.87',
+    porc_width_act_TEC: 'width: 12%',
+    value_now_act_TEC: '12',
+
+    cant_activos_VILLA: '156',
+    inc_activos_VILLA: '-11',
+    porc_activos_VILLA: '23.15',
+    porc_width_act_VILLA: 'width: 23%',
+    value_now_act_VILLA: '23',
+
+    cant_activos_COL: '213',
+    inc_activos_COL: '-16',
+    porc_activos_COL: '31.60',
+    porc_width_act_COL: 'width: 32%',
+    value_now_act_COL: '32',
+
+    cant_activos_CUA: '16',
+    inc_activos_CUA: '-2',
+    porc_activos_CUA: '2.37',
+    porc_width_act_CUA: 'width: 2%',
+    value_now_act_CUA: '2',
+
+    cant_activos_ARM: '10',
+    inc_activos_ARM: '0',
+    porc_activos_ARM: '1.48',
+    porc_width_act_ARM: 'width: 1%',
+    value_now_act_ARM: '1',
+
+    cant_activos_COQ: '18',
+    inc_activos_COQ: '-2',
+    porc_activos_COQ: '2.67',
+    porc_width_act_COQ: 'width: 3%',
+    value_now_act_COQ: '3',
+
+    cant_activos_MIN: '5',
+    inc_activos_MIN: '0',
+    porc_activos_MIN: '0.74',
+    porc_width_act_MIN: 'width: 1%',
+    value_now_act_MIN: '1',
+
+    cant_activos_IXT: '14',
+    inc_activos_IXT: '0',
+    porc_activos_IXT: '2.08',
+    porc_width_act_IXT: 'width: 2%',
+    value_now_act_IXT: '2',
+
+    cant_activos_COM: '8',
+    inc_activos_COM: '0',
+    porc_activos_COM: '1.19',
+    porc_width_act_COM: 'width: 1%',
+    value_now_act_COM: '1',
+
+    positivos_title: 'Casos positivos acumulados por municipio, para el día de hoy: +',
+    cant_positivos_MZO: '1082',
+    inc_positivos_MZO: '13',
+    porc_positivos_MZO: '37.14',
+    porc_width_pos_MZO: 'width: 33%',
+    value_now_pos_MZO: '33',
+
+    cant_positivos_TEC: '634',
+    inc_positivos_TEC: '2',
+    porc_positivos_TEC: '5.71',
+    porc_width_pos_TEC: 'width: 6%',
+    value_now_pos_TEC: '6',
+
+    cant_positivos_VILLA: '565',
+    inc_positivos_VILLA: '9',
+    porc_positivos_VILLA: '25.71',
+    porc_width_pos_VILLA: 'width: 26%',
+    value_now_pos_VILLA: '26',
+
+    cant_positivos_COL: '773',
+    inc_positivos_COL: '7',
+    porc_positivos_COL: '20.00',
+    porc_width_pos_COL: 'width: 20%',
+    value_now_pos_COL: '20',
+
+    cant_positivos_CUA: '63',
+    inc_positivos_CUA: '0',
+    porc_positivos_CUA: '0.00',
+    porc_width_pos_CUA: 'width: 0%',
+    value_now_pos_CUA: '0',
+
+    cant_positivos_ARM: '60',
+    inc_positivos_ARM: '1',
+    porc_positivos_ARM: '2.22',
+    porc_width_pos_ARM: 'width: 2%',
+    value_now_pos_ARM: '2',
+
+    cant_positivos_COQ: '72',
+    inc_positivos_COQ: '1',
+    porc_positivos_COQ: '2.86',
+    porc_width_pos_COQ: 'width: 3%',
+    value_now_pos_COQ: '3',
+
+    cant_positivos_MIN: '21',
+    inc_positivos_MIN: '0',
+    porc_positivos_MIN: '0.00',
+    porc_width_pos_MIN: 'width: 0%',
+    value_now_pos_MIN: '0',
+
+    cant_positivos_IXT: '38',
+    inc_positivos_IXT: '3',
+    porc_positivos_IXT: '8.57',
+    porc_width_pos_IXT: 'width: 9%',
+    value_now_pos_IXT: '9',
+
+    cant_positivos_COM: '34',
+    inc_positivos_COM: '0',
+    porc_positivos_COM: '0.00',
+    porc_width_pos_COM: 'width: 0%',
+    value_now_pos_COM: '0',
+    url_youtube: 'https://www.youtube.com/watch?v=_iqSAKH50DQ',
+    url_reporte: 'http://saludcolima.gob.mx/coronavirus/reportes/Reporte-Covid19-Colima-250820.pdf',
+    porc_tot_activos_MZO: '32.38',
+    porc_tot_activos_TEC: '18.97',
+    porc_tot_activos_VILLA: '16.91',
+    porc_tot_activos_COL: '23.13',
+    cant_tot_activos_MZO: '1082',
+    cant_tot_activos_TEC: '634',
+    cant_tot_activos_VILLA: '565',
+    cant_tot_activos_COL: '773',
+    date: 'TRUE',
+    valeur: '13,2,9,7,0,0,1,0,3,0',
+    pie: '1069,632,556,766',
+    municipios_acum_chart: '"Mzo. 37.14%","Tecomán 5.71%","V. de A. 25.71%,","Colima 20%","Cuauh 0%","Armería 0%","Coqui 2.85%","Mina 0%","Ixtla 8.57%","Comala 0%"',
+    news: [
+      '<div class="row"> <div class="col-xl-12 col-lg-12"> <div class="card shadow mb-4"> <div class="card-body"> <div class="row no-gutters align-items-center"> <div class="col mr-2"> <div class="text-s font-weight-bold text-danger text-uppercase mb-1">Hoy se registra el mayor número de defunciones para un sólo día durante toda la pandemia </div> <div class="h5 mb-0 font-weight-bold text-gray-800"> 44% </div> </div> <div class="col-auto"> <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i> </div> </div> </div> </div> </div> </div>'
+    ],
+    defunciones_totales: '24,30,92,90,82,43',
+    defunciones_totales_mujeres: '8,8,32,41,32,18',
+    defunciones_totales_hombres: '16,22,60,49,50,25',
+    porc_defunciones_tot_rango_uno: '6.6',
+    porc_defunciones_tot_rango_dos: '8.3',
+    porc_defunciones_tot_rango_tres: '25.4',
+    porc_defunciones_tot_rango_cuatro: '24.9',
+    porc_defunciones_tot_rango_cinco: '27.1',
+    porc_defunciones_tot_rango_seis: '11.9',
+    porc_defunciones_tot_hom_rango_uno: '7.2',
+    porc_defunciones_tot_hom_rango_dos: '9.9',
+    porc_defunciones_tot_hom_rango_tres: '27.1',
+    porc_defunciones_tot_hom_rango_cuatro: '22.1',
+    porc_defunciones_tot_hom_rango_cinco: '22.5',
+    porc_defunciones_tot_hom_rango_seis: '11.2',
+    porc_defunciones_tot_muj_rango_uno: '5.7',
+    porc_defunciones_tot_muj_rango_dos: '5.7',
+    porc_defunciones_tot_muj_rango_tres: '23.1',
+    porc_defunciones_tot_muj_rango_cuatro: '29.4',
+    porc_defunciones_tot_muj_rango_cinco: '23.1',
+    porc_defunciones_tot_muj_rango_seis: '12.9'
+
+  }
+
+
+  document.getElementById("dia_update").innerHTML = 'Update ' + data.dia_update + ' 2020 16:00 hrs';
+  document.getElementById("inc_positivos").innerHTML += data.inc_positivos;
+  document.getElementById("cant_positivos").innerHTML = data.cant_positivos;
+  document.getElementById("inc_activos").innerHTML += data.inc_activos;
+  document.getElementById("cant_activos").innerHTML = data.cant_activos;
+  document.getElementById("inc_defunciones").innerHTML += data.inc_defunciones;
+  document.getElementById("cant_defunciones").innerHTML = data.cant_defunciones;
+  document.getElementById("inc_recuperados").innerHTML += data.inc_recuperados;
+  document.getElementById("cant_recuperados").innerHTML = data.cant_recuperados;
+  document.getElementById("inc_sospechosos").innerHTML += data.inc_sospechosos;
+  document.getElementById("cant_sospechosos").innerHTML = data.cant_sospechosos;
+  document.getElementById("inc_letalidad").innerHTML += data.inc_letalidad;
+  document.getElementById("tasa_letalidad").innerHTML = data.tasa_letalidad;
+  document.getElementById("inc_camas").innerHTML += data.inc_camas;
+  document.getElementById("cant_camas").innerHTML = data.cant_camas;
+  document.getElementById("municipio_mas_positivos").innerHTML += data.municipio_mas_positivos;
+  document.getElementById("semaforo").innerHTML = data.semaforo;
+  document.getElementById("positivos-defunciones").innerHTML = "Recuperados: " + data.cant_recuperados + " (+" + data.inc_recuperados + ")," + " casos positivos acumulados: " + data.cant_positivos + " (+" + data.inc_positivos + ") y defunciones: " + data.cant_defunciones + " (+" + data.inc_defunciones + ")";
+  document.getElementById("chart_letalidad_title").innerHTML = data.chart_letalidad_title + data.tasa_letalidad;
+  document.getElementById("chart_recuperados_title").innerHTML = data.chart_recuperados_title + data.inc_recuperados + ", en promedio: " + data.prom_recuperados;
+  document.getElementById("chart_defunciones_title").innerHTML = data.chart_defunciones_title + data.inc_defunciones + ", en promedio: " + data.prom_defunciones;
+  document.getElementById("chart_positivos_title").innerHTML = data.chart_positivos_title + data.inc_positivos + ", en promedio: " + data.prom_acumulados;
+  document.getElementById("defunciones_title").innerHTML = data.cant_defunciones + data.defunciones_title + data.inc_defunciones;
+  // var t = "Manzanillo -> " + data.cant_defunciones_MZO + "(" + data.inc_defunciones_MZO + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_MZO + "</span>";
+
+  document.getElementById("defunciones_MZO").innerHTML = "Manzanillo -> " + data.cant_defunciones_MZO + " (" + data.inc_defunciones_MZO + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_MZO + " %</span>";
+  document.getElementById("bar_def_MZO").setAttribute("style", data.porc_width_def_MZO);
+  document.getElementById("bar_def_MZO").setAttribute("aria-valuenow", data.value_now_def_MZO);
+
+  document.getElementById("defunciones_TEC").innerHTML = "Tecomán -> " + data.cant_defunciones_TEC + " (" + data.inc_defunciones_TEC + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_TEC + " %</span>";
+  document.getElementById("bar_def_TEC").setAttribute("style", data.porc_width_def_TEC);
+  document.getElementById("bar_def_TEC").setAttribute("aria-valuenow", data.value_now_def_TEC);
+
+  document.getElementById("defunciones_VILLA").innerHTML = "Villa de Álvarez -> " + data.cant_defunciones_VILLA + " (" + data.inc_defunciones_VILLA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_VILLA + " %</span>";
+  document.getElementById("bar_def_VILLA").setAttribute("style", data.porc_width_def_VILLA);
+  document.getElementById("bar_def_VILLA").setAttribute("aria-valuenow", data.value_now_def_VILLA);
+
+  document.getElementById("defunciones_COL").innerHTML = "Colima -> " + data.cant_defunciones_COL + " (" + data.inc_defunciones_COL + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_COL + " %</span>";
+  document.getElementById("bar_def_COL").setAttribute("style", data.porc_width_def_COL);
+  document.getElementById("bar_def_COL").setAttribute("aria-valuenow", data.value_now_def_COL);
+
+  document.getElementById("defunciones_CUA").innerHTML = "Cuauhtémoc -> " + data.cant_defunciones_CUA + " (" + data.inc_defunciones_CUA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_CUA + " %</span>";
+  document.getElementById("bar_def_CUA").setAttribute("style", data.porc_width_def_CUA);
+  document.getElementById("bar_def_CUA").setAttribute("aria-valuenow", data.value_now_def_CUA);
+
+  document.getElementById("defunciones_ARM").innerHTML = "Armería -> " + data.cant_defunciones_ARM + " (" + data.inc_defunciones_ARM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_ARM + " %</span>";
+  document.getElementById("bar_def_ARM").setAttribute("style", data.porc_width_def_ARM);
+  document.getElementById("bar_def_ARM").setAttribute("aria-valuenow", data.value_now_def_ARM);
+
+  document.getElementById("defunciones_COQ").innerHTML = "Coquimatlán -> " + data.cant_defunciones_COQ + " (" + data.inc_defunciones_COQ + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_COQ + " %</span>";
+  document.getElementById("bar_def_COQ").setAttribute("style", data.porc_width_def_COQ);
+  document.getElementById("bar_def_COQ").setAttribute("aria-valuenow", data.value_now_def_COQ);
+
+  document.getElementById("defunciones_MIN").innerHTML = "Minatitlán -> " + data.cant_defunciones_MIN + " (" + data.inc_defunciones_MIN + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_MIN + " %</span>";
+  document.getElementById("bar_def_MIN").setAttribute("style", data.porc_width_def_MIN);
+  document.getElementById("bar_def_MIN").setAttribute("aria-valuenow", data.value_now_def_MIN);
+
+  document.getElementById("defunciones_IXT").innerHTML = "Ixtlahuacán -> " + data.cant_defunciones_IXT + " (" + data.inc_defunciones_IXT + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_IXT + " %</span>";
+  document.getElementById("bar_def_IXT").setAttribute("style", data.porc_width_def_IXT);
+  document.getElementById("bar_def_IXT").setAttribute("aria-valuenow", data.value_now_def_IXT);
+
+  document.getElementById("defunciones_COM").innerHTML = "Comala -> " + data.cant_defunciones_COM + " (" + data.inc_defunciones_COM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_defunciones_COM + " %</span>";
+  document.getElementById("bar_def_COM").setAttribute("style", data.porc_width_def_COM);
+  document.getElementById("bar_def_COM").setAttribute("aria-valuenow", data.value_now_def_COM);
+  // ================================================================================================= A C T I V O S
+  document.getElementById("activos_title").innerHTML = data.cant_activos + data.activos_title + data.inc_activos;
+
+  document.getElementById("activos_MZO").innerHTML = "Manzanillo -> " + data.cant_activos_MZO + " (" + data.inc_activos_MZO + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_MZO + " %</span>";
+  document.getElementById("bar_act_MZO").setAttribute("style", data.porc_width_act_MZO);
+  document.getElementById("bar_act_MZO").setAttribute("aria-valuenow", data.value_now_act_MZO);
+
+  document.getElementById("activos_TEC").innerHTML = "Tecomán -> " + data.cant_activos_TEC + " (" + data.inc_activos_TEC + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_TEC + " %</span>";
+  document.getElementById("bar_act_TEC").setAttribute("style", data.porc_width_act_TEC);
+  document.getElementById("bar_act_TEC").setAttribute("aria-valuenow", data.value_now_act_TEC);
+
+  document.getElementById("activos_VILLA").innerHTML = "Villa de Álvarez -> " + data.cant_activos_VILLA + " (" + data.inc_activos_VILLA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_VILLA + " %</span>";
+  document.getElementById("bar_act_VILLA").setAttribute("style", data.porc_width_act_VILLA);
+  document.getElementById("bar_act_VILLA").setAttribute("aria-valuenow", data.value_now_act_VILLA);
+
+  document.getElementById("activos_COL").innerHTML = "Colima -> " + data.cant_activos_COL + " (" + data.inc_activos_COL + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_COL + " %</span>";
+  document.getElementById("bar_act_COL").setAttribute("style", data.porc_width_act_COL);
+  document.getElementById("bar_act_COL").setAttribute("aria-valuenow", data.value_now_act_COL);
+
+  document.getElementById("activos_CUA").innerHTML = "Cuauhtémoc -> " + data.cant_activos_CUA + " (" + data.inc_activos_CUA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_CUA + " %</span>";
+  document.getElementById("bar_act_CUA").setAttribute("style", data.porc_width_act_CUA);
+  document.getElementById("bar_act_CUA").setAttribute("aria-valuenow", data.value_now_act_CUA);
+
+  document.getElementById("activos_ARM").innerHTML = "Armería -> " + data.cant_activos_ARM + " (" + data.inc_activos_ARM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_ARM + " %</span>";
+  document.getElementById("bar_act_ARM").setAttribute("style", data.porc_width_act_ARM);
+  document.getElementById("bar_act_ARM").setAttribute("aria-valuenow", data.value_now_act_ARM);
+
+  document.getElementById("activos_COQ").innerHTML = "Coquimatlán -> " + data.cant_activos_COQ + " (" + data.inc_activos_COQ + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_COQ + " %</span>";
+  document.getElementById("bar_act_COQ").setAttribute("style", data.porc_width_act_COQ);
+  document.getElementById("bar_act_COQ").setAttribute("aria-valuenow", data.value_now_act_COQ);
+
+  document.getElementById("activos_MIN").innerHTML = "Minatitlán -> " + data.cant_activos_MIN + " (" + data.inc_activos_MIN + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_MIN + " %</span>";
+  document.getElementById("bar_act_MIN").setAttribute("style", data.porc_width_act_MIN);
+  document.getElementById("bar_act_MIN").setAttribute("aria-valuenow", data.value_now_act_MIN);
+
+  document.getElementById("activos_IXT").innerHTML = "Ixtlahuacán -> " + data.cant_activos_IXT + " (" + data.inc_activos_IXT + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_IXT + " %</span>";
+  document.getElementById("bar_act_IXT").setAttribute("style", data.porc_width_act_IXT);
+  document.getElementById("bar_act_IXT").setAttribute("aria-valuenow", data.value_now_act_IXT);
+
+  document.getElementById("activos_COM").innerHTML = "Comala -> " + data.cant_activos_COM + " (" + data.inc_activos_COM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_activos_COM + " %</span>";
+  document.getElementById("bar_act_COM").setAttribute("style", data.porc_width_act_COM);
+  document.getElementById("bar_act_COM").setAttribute("aria-valuenow", data.value_now_act_COM);
+
+  // =======================================================================================P O S I T I V O S 
+  document.getElementById("positivos_title").innerHTML = data.positivos_title + data.inc_positivos;
+
+  document.getElementById("positivos_MZO").innerHTML = "Manzanillo -> " + data.cant_positivos_MZO + " (" + data.inc_positivos_MZO + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_MZO + " %</span>";
+  document.getElementById("bar_pos_MZO").setAttribute("style", data.porc_width_pos_MZO);
+  document.getElementById("bar_pos_MZO").setAttribute("aria-valuenow", data.value_now_pos_MZO);
+
+  document.getElementById("positivos_TEC").innerHTML = "Tecomán -> " + data.cant_positivos_TEC + " (" + data.inc_positivos_TEC + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_TEC + " %</span>";
+  document.getElementById("bar_pos_TEC").setAttribute("style", data.porc_width_pos_TEC);
+  document.getElementById("bar_pos_TEC").setAttribute("aria-valuenow", data.value_now_pos_TEC);
+
+  document.getElementById("positivos_VILLA").innerHTML = "Villa de Álvarez -> " + data.cant_positivos_VILLA + " (" + data.inc_positivos_VILLA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_VILLA + " %</span>";
+  document.getElementById("bar_pos_VILLA").setAttribute("style", data.porc_width_pos_VILLA);
+  document.getElementById("bar_pos_VILLA").setAttribute("aria-valuenow", data.value_now_pos_VILLA);
+
+  document.getElementById("positivos_COL").innerHTML = "Colima -> " + data.cant_positivos_COL + " (" + data.inc_positivos_COL + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_COL + " %</span>";
+  document.getElementById("bar_pos_COL").setAttribute("style", data.porc_width_pos_COL);
+  document.getElementById("bar_pos_COL").setAttribute("aria-valuenow", data.value_now_pos_COL);
+
+  document.getElementById("positivos_CUA").innerHTML = "Cuauhtémoc -> " + data.cant_positivos_CUA + " (" + data.inc_positivos_CUA + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_CUA + " %</span>";
+  document.getElementById("bar_pos_CUA").setAttribute("style", data.porc_width_pos_CUA);
+  document.getElementById("bar_pos_CUA").setAttribute("aria-valuenow", data.value_now_pos_CUA);
+
+  document.getElementById("positivos_ARM").innerHTML = "Armería -> " + data.cant_positivos_ARM + " (" + data.inc_positivos_ARM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_ARM + " %</span>";
+  document.getElementById("bar_pos_ARM").setAttribute("style", data.porc_width_pos_ARM);
+  document.getElementById("bar_pos_ARM").setAttribute("aria-valuenow", data.value_now_pos_ARM);
+
+  document.getElementById("positivos_COQ").innerHTML = "Coquimatlán -> " + data.cant_positivos_COQ + " (" + data.inc_positivos_COQ + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_COQ + " %</span>";
+  document.getElementById("bar_pos_COQ").setAttribute("style", data.porc_width_pos_COQ);
+  document.getElementById("bar_pos_COQ").setAttribute("aria-valuenow", data.value_now_pos_COQ);
+
+  document.getElementById("positivos_MIN").innerHTML = "Minatitlán -> " + data.cant_positivos_MIN + " (" + data.inc_positivos_MIN + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_MIN + " %</span>";
+  document.getElementById("bar_pos_MIN").setAttribute("style", data.porc_width_pos_MIN);
+  document.getElementById("bar_pos_MIN").setAttribute("aria-valuenow", data.value_now_pos_MIN);
+
+  document.getElementById("positivos_IXT").innerHTML = "Ixtlahuacán -> " + data.cant_positivos_IXT + " (" + data.inc_positivos_IXT + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_IXT + " %</span>";
+  document.getElementById("bar_pos_IXT").setAttribute("style", data.porc_width_pos_IXT);
+  document.getElementById("bar_pos_IXT").setAttribute("aria-valuenow", data.value_now_pos_IXT);
+
+  document.getElementById("positivos_COM").innerHTML = "Comala -> " + data.cant_positivos_COM + " (" + data.inc_positivos_COM + ")" + "<span class=" + "'" + "float-right" + "' >" + data.porc_positivos_COM + " %</span>";
+  document.getElementById("bar_pos_COM").setAttribute("style", data.porc_width_pos_COM);
+  document.getElementById("bar_pos_COM").setAttribute("aria-valuenow", data.value_now_pos_COM);
+
+  document.getElementById("num_reporte").setAttribute("href", data.url_reporte);
+  document.getElementById("num_reporte").innerHTML = data.url_reporte;
+  document.getElementById("reporte_camas").setAttribute("href", data.url_youtube);
+  document.getElementById("reporte_camas").innerHTML = data.url_youtube;
+  document.getElementById("leyenda_camas").innerHTML = data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México";
+
+
+
+  var mun_MZO = "<span class=\"mr-2\"> <i class=\"fas fa-circle text-danger\"></i> Manzanillo " + data.porc_tot_activos_MZO + "%</span>";
+  var mun_TEC = "<span class=\"mr-2\"><i class=\"fas fa-circle text-success\"></i> Tecomán " + data.porc_tot_activos_TEC + "%</span>";
+  var mun_VILLA = "<span class=\"mr-2\"><i class=\"fas fa-circle text-info\"></i> V. Álvarez " + data.porc_tot_activos_VILLA + "%</span>";
+  var mun_COL = "<span class=\"mr-2\"><i class=\"fas fa-circle text-primary\"></i> Colima " + data.porc_tot_activos_COL + "%</span>";
+
+  var def_tot_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\" ></i>  0--40 <strong>" + data.porc_defunciones_tot_rango_uno + " %</strong></span>";
+  var def_tot_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\" ></i>  41--50 <strong>" + data.porc_defunciones_tot_rango_dos + " %</strong></span>";
+  var def_tot_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_rango_tres + " %</strong></span>";
+  var def_tot_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\" ></i>  61-70 <strong>" + data.porc_defunciones_tot_rango_cuatro + " %</strong></span>";
+  var def_tot_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_rango_cinco + " %</strong></span>";
+  var def_tot_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_rango_seis + " %</strong></span>";
+
+
+  var def_tot_muj_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\"></i>  0--40 <strong>" + data.porc_defunciones_tot_muj_rango_uno + " %</strong></span>";
+  var def_tot_muj_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\"></i>  41--50 <strong>" + data.porc_defunciones_tot_muj_rango_dos + " %</strong></span>";
+  var def_tot_muj_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_muj_rango_tres + " %</strong></span>";
+  var def_tot_muj_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\"></i>  61-70 <strong>" + data.porc_defunciones_tot_muj_rango_cuatro + " %</strong></span>";
+  var def_tot_muj_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_muj_rango_cinco + " %</strong></span>";
+  var def_tot_muj_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_muj_rango_seis + " %</strong></span>";
+
+  var def_tot_hom_ran1 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #3498DB;\"></i>  0--40 <strong>" + data.porc_defunciones_tot_hom_rango_uno + " %</strong></span>";
+  var def_tot_hom_ran2 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #512E5F;\"></i>  41--50 <strong>" + data.porc_defunciones_tot_hom_rango_dos + " %</strong></span>";
+  var def_tot_hom_ran3 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #1B4F72;\" ></i>  51--60 <strong>" + data.porc_defunciones_tot_hom_rango_tres + " %</strong></span>";
+  var def_tot_hom_ran4 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D4AC0D;\"></i>  61-70 <strong>" + data.porc_defunciones_tot_hom_rango_cuatro + " %</strong></span>";
+  var def_tot_hom_ran5 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #0E6251;\" ></i>  71-80 <strong>" + data.porc_defunciones_tot_hom_rango_cinco + " %</strong></span>";
+  var def_tot_hom_ran6 = "<span class=\"mr-2\"><i class=\"fas fa-circle\" style=\"color: #D35400;\" ></i>  80+ <strong>" + data.porc_defunciones_tot_hom_rango_seis + " %</strong></span>";
+
+
+  document.getElementById("porc_def_tot").innerHTML = def_tot_ran1 + def_tot_ran2 + def_tot_ran3 + def_tot_ran4 + def_tot_ran5 + def_tot_ran6;
+  document.getElementById("porc_def_tot_muj").innerHTML = def_tot_muj_ran1 + def_tot_muj_ran2 + def_tot_muj_ran3 + def_tot_muj_ran4 + def_tot_muj_ran5 + def_tot_muj_ran6;
+  document.getElementById("porc_def_tot_hom").innerHTML = def_tot_hom_ran1 + def_tot_hom_ran2 + def_tot_hom_ran3 + def_tot_hom_ran4 + def_tot_hom_ran5 + def_tot_hom_ran6;
+  document.getElementById("pos_acum_Municipio").innerHTML = mun_MZO + mun_TEC + mun_VILLA + mun_COL;
+
+
+</script>
+
+
+
+
+
+
+</html>
