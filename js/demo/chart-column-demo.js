@@ -1,8 +1,8 @@
-var valeur = [0, 2, 1, 1, 1, 0, 0, 0, 0, 0];
-var date = [
-    "Mzo. 0%", "Tecomán 40%", "V. de A. 20%,", "Colima 20%", "Cuauh 20%", "Armería 0%", "Coqui 0%", "Mina 0%", "Ixtla 0%", "Comala 0%"
-];
-
+var valeur = data.valeur;
+// var date = [
+//     "Mzo. 0%", "Tecomán 40%", "V. de A. 20%,", "Colima 20%", "Cuauh 20%", "Armería 0%", "Coqui 0%", "Mina 0%", "Ixtla 0%", "Comala 0%"
+// ];
+var date = data.municipios_acum_chart;
 var options = {
     chart: {
         height: 350,
