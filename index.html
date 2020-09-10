@@ -1407,7 +1407,7 @@
                                     <p style="text-align: justify;"> Última actualización: <a id="num_reporte"></a>
                                     </p>
                                     <p>* Letalidad en casos positivos acumulados</p>
-                                    <p id="leyenda_camas"><a id="reporte_camas"></a>
+                                    <p id="leyenda_camas">
                                     </p>
                                     <!-- <p>*** Vigencia del semáforo: a partir del lunes (29 de junio) hasta el viernes (5 de julio)</p> -->
 
@@ -1655,7 +1655,7 @@
 
     document.getElementById("num_reporte").setAttribute("href", data.url_reporte);
     document.getElementById("num_reporte").innerHTML = data.url_reporte;
-    document.getElementById("leyenda_camas").innerHTML = data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México";
+    document.getElementById("leyenda_camas").innerHTML = data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México" + " <a id=\"reporte_camas\"></a>";
     document.getElementById("reporte_camas").setAttribute("href", data.url_youtube);
     document.getElementById("reporte_camas").innerHTML = data.url_youtube;
     console.log(data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México");
