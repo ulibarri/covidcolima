@@ -240,6 +240,12 @@
             cant_tot_activos_COL: '1021',
             date: 'TRUE',
             valeur: [11, 2, 7, 14, 0, 0, 0, 0, 0, 2],
+            camas_general: [.44, .56],
+            leyenda_camas_general: ["Disponibles 44%", "Ocupadas 56%"],
+            lugar_camas_general: "33/33",
+            camas_ventilador: [.63, .37],
+            leyenda_camas_ventilador: ["Disponibles 63%", "Ocupadas 37%"],
+            lugar_camas_ventilador: "30/33",
             pie: [1292, 710, 779, 1021],
             municipios_acum_chart: ["Mzo. 30.55%", "Tecomán 5.55%", "V. de A. 19.44%,", "Colima 38.88%", "Cuauh 0%", "Armería 0%", "Coqui 0%", "Mina 0%", "Ixtla 0%", "Comala 5.55%"],
             news: [
@@ -806,6 +812,48 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 id="camas_general" class="m-0 font-weight-bold text-primary">
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="camas_general_chart"></canvas>
+                                    </div>
+                                    <div id="" class="mt-4 text-center small">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 id="camas_ventilador" class="m-0 font-weight-bold text-primary">Disponibilidad
+                                        camas con
+                                        ventilador<br>Lugar en el país: <span
+                                            class="m-0 font-weight-bold text-danger">30/33</span>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="camas_ventilador_chart"></canvas>
+                                    </div>
+                                    <div id="" class="mt-4 text-center small">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -------------------------------------- -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
@@ -1706,8 +1754,9 @@
     document.getElementById("leyenda_camas").innerHTML = data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México" + " <a id=\"reporte_camas\"></a>";
     document.getElementById("reporte_camas").setAttribute("href", data.url_youtube);
     document.getElementById("reporte_camas").innerHTML = data.url_youtube;
-    console.log(data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México");
-
+    // console.log(data.camas_title + " " + data.dia + " " + data.mes + " 2020, Informe diario por Coronavirus en México");
+    document.getElementById("camas_general").innerHTML = "Disponibilidad camas hospitalización general<br>Lugar en el país: <span class=\"m-0 font-weight-bold text-danger\">" + data.lugar_camas_general + " </span>";
+    document.getElementById("camas_ventilador").innerHTML = "Disponibilidad camas con ventilador<br>Lugar en el país: <span class=\"m-0 font-weight-bold text-danger\">" + data.lugar_camas_ventilador + " </span>";
 
     var mun_MZO = "<span class=\"mr-2\"> <i class=\"fas fa-circle text-danger\"></i> Manzanillo " + data.porc_tot_activos_MZO + "%</span>";
     var mun_TEC = "<span class=\"mr-2\"><i class=\"fas fa-circle text-success\"></i> Tecomán " + data.porc_tot_activos_TEC + "%</span>";
