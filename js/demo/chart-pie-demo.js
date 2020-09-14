@@ -203,7 +203,7 @@ var myPieChart6 = new Chart(ctx6, {
     datasets: [{
       data: data.camas_general,
       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
-      hoverBackgroundColor: ['#D6EAF8', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
+      hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -236,7 +236,7 @@ var myPieChart7 = new Chart(ctx7, {
     datasets: [{
       data: data.camas_ventilador,
       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
-      hoverBackgroundColor: ['#D6EAF8', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
+      hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
