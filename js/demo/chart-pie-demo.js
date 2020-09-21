@@ -40,37 +40,37 @@ var myPieChart = new Chart(ctx, {
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-// Pie Chart Example
-// var ctx = document.getElementById("mySexPieChart");
-// var myPieChart = new Chart(ctx, {
-//   type: 'doughnut',
-//   data: {
-//     labels: ["Hombres", "Mujeres"],
-//     datasets: [{
-//       data: [222, 139],
-//       backgroundColor: ['#13855c', '#6f42c1'],
-//       hoverBackgroundColor: ['#1cc88a', '#9b7cd4'],
-//       hoverBorderColor: "rgba(234, 236, 244, 1)",
-//     }],
-//   },
-//   options: {
-//     maintainAspectRatio: false,
-//     tooltips: {
-//       backgroundColor: "rgb(255,255,255)",
-//       bodyFontColor: "#858796",
-//       borderColor: '#dddfeb',
-//       borderWidth: 1,
-//       xPadding: 15,
-//       yPadding: 15,
-//       displayColors: false,
-//       caretPadding: 10,
-//     },
-//     legend: {
-//       display: false
-//     },
-//     cutoutPercentage: 80,
-//   },
-// });
+
+var ctx = document.getElementById("mySexPieChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Hombres", "Mujeres"],
+    datasets: [{
+      data: data.pie_defunciones_sexo,
+      backgroundColor: ['#13855c', '#6f42c1'],
+      hoverBackgroundColor: ['#1cc88a', '#9b7cd4'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 80,
+  },
+});
 
 
 
@@ -195,66 +195,66 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
-var ctx6 = document.getElementById("camas_general_chart");
-var myPieChart6 = new Chart(ctx6, {
-  type: 'doughnut',
-  data: {
-    labels: data.leyenda_camas_general,
-    datasets: [{
-      data: data.camas_general,
-      backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
-      hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
-      hoverBorderColor: "rgba(234, 236, 244, 1)",
-    }],
-  },
-  options: {
-    maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-    },
-    legend: {
-      display: true
-    },
-    cutoutPercentage: 80,
-  },
-});
+// var ctx6 = document.getElementById("camas_general_chart");
+// var myPieChart6 = new Chart(ctx6, {
+//   type: 'doughnut',
+//   data: {
+//     labels: data.leyenda_camas_general,
+//     datasets: [{
+//       data: data.camas_general,
+//       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
+//       hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
+//       hoverBorderColor: "rgba(234, 236, 244, 1)",
+//     }],
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     tooltips: {
+//       backgroundColor: "rgb(255,255,255)",
+//       bodyFontColor: "#858796",
+//       borderColor: '#dddfeb',
+//       borderWidth: 1,
+//       xPadding: 15,
+//       yPadding: 15,
+//       displayColors: false,
+//       caretPadding: 10,
+//     },
+//     legend: {
+//       display: true
+//     },
+//     cutoutPercentage: 80,
+//   },
+// });
 
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.global.defaultFontColor = '#858796';
-var ctx7 = document.getElementById("camas_ventilador_chart");
-var myPieChart7 = new Chart(ctx7, {
-  type: 'doughnut',
-  data: {
-    labels: data.leyenda_camas_ventilador,
-    datasets: [{
-      data: data.camas_ventilador,
-      backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
-      hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
-      hoverBorderColor: "rgba(234, 236, 244, 1)",
-    }],
-  },
-  options: {
-    maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-    },
-    legend: {
-      display: true
-    },
-    cutoutPercentage: 80,
-  },
-});
+// Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+// Chart.defaults.global.defaultFontColor = '#858796';
+// var ctx7 = document.getElementById("camas_ventilador_chart");
+// var myPieChart7 = new Chart(ctx7, {
+//   type: 'doughnut',
+//   data: {
+//     labels: data.leyenda_camas_ventilador,
+//     datasets: [{
+//       data: data.camas_ventilador,
+//       backgroundColor: ['#3498DB', '#512E5F', '#1B4F72', '#D4AC0D', '#0E6251', '#D35400', '#1B2631'],
+//       hoverBackgroundColor: ['#15C5DE', '#C39BD3', '#7FB3D5', '#F9E79F', '#73C6B6', '#EDBB99', '#85929E'],
+//       hoverBorderColor: "rgba(234, 236, 244, 1)",
+//     }],
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     tooltips: {
+//       backgroundColor: "rgb(255,255,255)",
+//       bodyFontColor: "#858796",
+//       borderColor: '#dddfeb',
+//       borderWidth: 1,
+//       xPadding: 15,
+//       yPadding: 15,
+//       displayColors: false,
+//       caretPadding: 10,
+//     },
+//     legend: {
+//       display: true
+//     },
+//     cutoutPercentage: 80,
+//   },
+// });
