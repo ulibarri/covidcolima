@@ -62,16 +62,29 @@ var chart = new ApexCharts(document.querySelector("#chart-column"), options);
 chart.render();
 
 var valeur = data.chart_area_positivos;
-// var date = [
-//     "Mzo. 0%", "Tecomán 40%", "V. de A. 20%,", "Colima 20%", "Cuauh 20%", "Armería 0%", "Coqui 0%", "Mina 0%", "Ixtla 0%", "Comala 0%"
-// ];
 var date = data.dias;
 // data.municipios_acum_chart;
 var options = {
     chart: {
         height: 350,
         width: "100%",
-        type: "bar"
+        type: "bar",
+        events: {
+            beforeMount: undefined,
+            mounted: undefined,
+            updated: undefined,
+            click: undefined,
+            mouseMove: undefined,
+            legendClick: undefined,
+            markerClick: undefined,
+            selection: undefined,
+            dataPointSelection: undefined,
+            dataPointMouseEnter: undefined,
+            dataPointMouseLeave: undefined,
+            beforeZoom: undefined,
+            zoomed: undefined,
+            scrolled: undefined,
+        }
     },
     plotOptions: {
         bar: {
@@ -96,7 +109,12 @@ var options = {
         style: {
             colors: ["#333"]
         },
-        offsetY: -20
+        offsetY: -20,
+        legend: {
+            onItemClick: {
+                toggleDataSeries: false
+            }
+        }
     },
     series: [
         {
