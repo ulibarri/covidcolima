@@ -92,7 +92,7 @@ var options = {
         }
     },
     dataLabels: {
-        enabled: true,
+        enabled: false,
         style: {
             colors: ["#333"]
         },
