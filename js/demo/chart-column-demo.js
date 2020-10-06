@@ -118,7 +118,7 @@ var options = {
     },
     series: [
         {
-            name: "Incremento",
+            name: "Casos",
             data: valeur
         }
     ],
