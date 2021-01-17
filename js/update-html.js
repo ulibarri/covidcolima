@@ -209,8 +209,8 @@ document.getElementById("pos_acum_Municipio").innerHTML = mun_MZO + mun_TEC + mu
 // tablas de ocupacion hospitalaria
 document.getElementById("hgm_ocupacion_general").innerText = data.hgm_ocupacion_general + "%";
 document.getElementById("inc_hgm_ocupacion_general").innerText = data.inc_hgm_ocupacion_general;
-document.getElementById("hru_ocupacion_general").innerText = data.hgm_ocupacion_general + "%";
-document.getElementById("inc_hru_ocupacion_general").innerText = data.inc_hgm_ocupacion_general;
+document.getElementById("hru_ocupacion_general").innerText = data.hru_ocupacion_general + "%";
+document.getElementById("inc_hru_ocupacion_general").innerText = data.inc_hru_ocupacion_general;
 document.getElementById("mzo_ocupacion_general").innerText = data.mzo_ocupacion_general + "%";
 document.getElementById("inc_mzo_ocupacion_general").innerText = data.inc_mzo_ocupacion_general;
 document.getElementById("hgz10_ocupacion_general").innerText = data.hgz10_ocupacion_general + "%";
