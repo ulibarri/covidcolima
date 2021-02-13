@@ -7,6 +7,7 @@
         "npm": ">=6.0.0"
     },
     "scripts": {
+        "build": "gulp",
         "start": "node_modules/.bin/gulp watch",
         "postinstall": "gulp build"
     },
