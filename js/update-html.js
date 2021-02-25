@@ -15,8 +15,8 @@ document.getElementById("cant_negativos").innerHTML = data.cant_negativos;
 
 document.getElementById("inc_letalidad").innerHTML += data.inc_letalidad;
 document.getElementById("tasa_letalidad").innerHTML = data.tasa_letalidad;
-document.getElementById("inc_camas").innerHTML += data.inc_camas;
-document.getElementById("cant_camas").innerHTML = data.cant_camas;
+// document.getElementById("inc_camas").innerHTML += data.inc_camas;
+// document.getElementById("cant_camas").innerHTML = data.cant_camas;
 document.getElementById("municipio_mas_positivos").innerHTML += data.municipio_mas_positivos;
 document.getElementById("semaforo").innerHTML = data.semaforo;
 document.getElementById("positivos-defunciones").innerHTML = "Recuperados: " + data.cant_recuperados + " (+" + data.inc_recuperados + ")," + " casos positivos acumulados: " + data.cant_positivos + " (+" + data.inc_positivos + ") y defunciones: " + data.cant_defunciones + " (+" + data.inc_defunciones + ")";
